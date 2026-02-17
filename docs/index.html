@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M2 Money Supply Tracker | Global Economic Data</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-secondary: #12182b;
+            --bg-card: #1a2342;
+            --text-primary: #ffffff;
+            --text-secondary: #a0aec0;
+            --accent-primary: #00d4ff;
+            --accent-secondary: #7b68ee;
+            --border-color: #2d3748;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg-primary); color: var(--text-primary); min-height: 100vh; line-height: 1.6; }
+        header { background: var(--bg-secondary); padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
+        .header-content { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        h1 { font-size: 1.75rem; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .subtitle { color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.25rem; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
+        .country-selector { background: var(--bg-card); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; border: 1px solid var(--border-color); }
+        .selector-title { font-size: 1.1rem; margin-bottom: 1rem; }
+        .country-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; }
+        .country-checkbox { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; background: var(--bg-secondary); border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid var(--border-color); }
+        .country-checkbox:hover { border-color: var(--accent-primary); }
+        .country-checkbox input { width: 18px; height: 18px; accent-color: var(--accent-primary); }
+        .country-info { display: flex; flex-direction: column; }
+        .country-name { font-weight: 500; font-size: 0.95rem; }
+        .country-currency { font-size: 0.8rem; color: var(--text-secondary); }
+        .chart-container { background: var(--bg-card); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; border: 1px solid var(--border-color); }
+        .chart-title { font-size: 1.2rem; margin-bottom: 1.5rem; }
+        .chart-wrapper { position: relative; height: 400px; }
+        .update-time { text-align: center; color: var(--text-secondary); font-size: 0.85rem; margin-top: 1rem; }
+        .sources-section { background: var(--bg-card); border-radius: 12px; padding: 1.5rem; border: 1px solid var(--border-color); }
+        .sources-title { font-size: 1.1rem; margin-bottom: 1rem; }
+        .sources-list { list-style: none; }
+        .source-item { padding: 0.75rem 0; border-bottom: 1px solid var(--border-color); color: var(--text-secondary); display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .source-item:last-child { border-bottom: none; }
+        .source-link { color: var(--accent-primary); text-decoration: none; font-weight: 500; }
+        .source-link:hover { text-decoration: underline; }
+        .disclaimer { background: var(--bg-secondary); border-radius: 8px; padding: 1rem; margin-top: 1rem; font-size: 0.85rem; color: var(--text-secondary); border-left: 3px solid var(--accent-secondary); }
+        @media (max-width: 768px) { .container { padding: 1rem; } .country-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); } .chart-wrapper { height: 300px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>M2 Money Supply Tracker</h1>
+                <div class="subtitle">Compare broad money supply across major economies</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="country-selector">
+            <div class="selector-title">Select countries to compare:</div>
+            <div class="country-grid" id="countryGrid"></div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-title">M2 Money Supply Over Time</div>
+            <div class="chart-wrapper"><canvas id="m2Chart"></canvas></div>
+            <div class="update-time" id="updateTime">Last updated: 2026-02-18</div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-title">Latest M2 Values</div>
+            <div class="chart-wrapper"><canvas id="latestChart"></canvas></div>
+        </div>
+
+        <div class="sources-section">
+            <div class="sources-title">📊 Data Sources</div>
+            <ul class="sources-list">
+                <li class="source-item"><span>🇺🇸</span><span>Federal Reserve - M2 Money Stock</span><a href="https://fred.stlouisfed.org/series/M2SL" target="_blank" class="source-link">View Source →</a></li>
+                <li class="source-item"><span>🇪🇺</span><span>European Central Bank - Euro Area M2</span><a href="https://www.ecb.europa.eu/stats/" target="_blank" class="source-link">View Source →</a></li>
+                <li class="source-item"><span>🇨🇳</span><span>People's Bank of China - Currency Supply</span><a href="http://www.pbc.gov.cn/en/3688110/3688172/index.html" target="_blank" class="source-link">View Source →</a></li>
+                <li class="source-item"><span>🇯🇵</span><span>Bank of Japan - Money Stock Statistics</span><a href="https://www.boj.or.jp/en/statistics/ms/ms.htm" target="_blank" class="source-link">View Source →</a></li>
+                <li class="source-item"><span>🇬🇧</span><span>Bank of England - Monetary Aggregates</span><a href="https://www.bankofengland.co.uk/statistics" target="_blank" class="source-link">View Source →</a></li>
+                <li class="source-item"><span>🌍</span><span>World Bank Global Money Supply Database</span><a href="https://data.worldbank.org/indicator/FM.LBL.MQMY.CN" target="_blank" class="source-link">View Source →</a></li>
+            </ul>
+            <div class="disclaimer">
+                <strong>Disclaimer:</strong> Data shown is based on historical records from public sources. M2 definitions vary by country. Local currency units shown - use Purchasing Power Parity (PPP) or exchange rates for accurate cross-country comparisons. For educational purposes only.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Embedded M2 data (local currency units - nominal)
+        const M2_DATA = {
+            'US': {
+                name: 'United States',
+                currency: 'USD',
+                unit: 'billions USD',
+                source: 'Federal Reserve',
+                data: [
+                    {date: '2018-01', value: 13750}, {date: '2018-06', value: 14050}, {date: '2018-12', value: 14350},
+                    {date: '2019-01', value: 14400}, {date: '2019-06', value: 14700}, {date: '2019-12', value: 15100},
+                    {date: '2020-01', value: 15250}, {date: '2020-03', value: 16000}, {date: '2020-06', value: 18100},
+                    {date: '2020-09', value: 19000}, {date: '2020-12', value: 19500}, {date: '2021-01', value: 19600},
+                    {date: '2021-06', value: 20300}, {date: '2021-12', value: 21600}, {date: '2022-01', value: 21800},
+                    {date: '2022-06', value: 21500}, {date: '2022-12', value: 21300}, {date: '2023-01', value: 21500},
+                    {date: '2023-06', value: 20700}, {date: '2024-01', value: 20900}, {date: '2024-06', value: 21100},
+                    {date: '2025-01', value: 21500}
+                ]
+            },
+            'CN': {
+                name: 'China',
+                currency: 'CNY',
+                unit: 'trillions CNY',
+                source: 'PBOC',
+                data: [
+                    {date: '2018-01', value: 173}, {date: '2018-06', value: 177}, {date: '2018-12', value: 183},
+                    {date: '2019-01', value: 186}, {date: '2019-06', value: 192}, {date: '2019-12', value: 199},
+                    {date: '2020-01', value: 203}, {date: '2020-06', value: 213}, {date: '2020-12', value: 219},
+                    {date: '2021-01', value: 222}, {date: '2021-06', value: 231}, {date: '2021-12', value: 238},
+                    {date: '2022-01', value: 243}, {date: '2022-06', value: 258}, {date: '2022-12', value: 266},
+                    {date: '2023-01', value: 273}, {date: '2023-06', value: 287}, {date: '2024-01', value: 314},
+                    {date: '2025-01', value: 330}
+                ]
+            },
+            'EU': {
+                name: 'Euro Area',
+                currency: 'EUR',
+                unit: 'billions EUR',
+                source: 'ECB',
+                data: [
+                    {date: '2018-01', value: 11700}, {date: '2018-06', value: 12000}, {date: '2018-12', value: 12300},
+                    {date: '2019-01', value: 12400}, {date: '2019-06', value: 12800}, {date: '2019-12', value: 13100},
+                    {date: '2020-01', value: 13300}, {date: '2020-06', value: 14300}, {date: '2020-12', value: 14800},
+                    {date: '2021-01', value: 15000}, {date: '2021-06', value: 15500}, {date: '2021-12', value: 16000},
+                    {date: '2022-01', value: 16200}, {date: '2022-06', value: 16500}, {date: '2022-12', value: 16700},
+                    {date: '2023-01', value: 16800}, {date: '2023-06', value: 16500}, {date: '2024-01', value: 16200},
+                    {date: '2025-01', value: 16500}
+                ]
+            },
+            'JP': {
+                name: 'Japan',
+                currency: 'JPY',
+                unit: 'trillions JPY',
+                source: 'BOJ',
+                data: [
+                    {date: '2018-01', value: 1000}, {date: '2018-06', value: 1020}, {date: '2018-12', value: 1040},
+                    {date: '2019-01', value: 1050}, {date: '2019-06', value: 1070}, {date: '2019-12', value: 1090},
+                    {date: '2020-01', value: 1100}, {date: '2020-06', value: 1150}, {date: '2020-12', value: 1180},
+                    {date: '2021-01', value: 1190}, {date: '2021-06', value: 1220}, {date: '2021-12', value: 1260},
+                    {date: '2022-01', value: 1280}, {date: '2022-06', value: 1300}, {date: '2022-12', value: 1320},
+                    {date: '2023-01', value: 1340}, {date: '2023-06', value: 1370}, {date: '2024-01', value: 1410},
+                    {date: '2025-01', value: 1450}
+                ]
+            },
+            'GB': {
+                name: 'United Kingdom',
+                currency: 'GBP',
+                unit: 'billions GBP',
+                source: 'BoE',
+                data: [
+                    {date: '2018-01', value: 2350}, {date: '2018-06', value: 2400}, {date: '2018-12', value: 2450},
+                    {date: '2019-01', value: 2470}, {date: '2019-06', value: 2520}, {date: '2019-12', value: 2570},
+                    {date: '2020-01', value: 2600}, {date: '2020-06', value: 2850}, {date: '2020-12', value: 2950},
+                    {date: '2021-01', value: 3000}, {date: '2021-06', value: 3100}, {date: '2021-12', value: 3200},
+                    {date: '2022-01', value: 3250}, {date: '2022-06', value: 3300}, {date: '2022-12', value: 3350},
+                    {date: '2023-01', value: 3400}, {date: '2023-06', value: 3500}, {date: '2024-01', value: 3600},
+                    {date: '2025-01', value: 3700}
+                ]
+            }
+        };
+
+        const countryColors = {'US': '#00d4ff', 'CN': '#ff6b6b', 'EU': '#7b68ee', 'JP': '#4ecdc4', 'GB': '#ff9f43'};
+        let selectedCountries = ['US', 'CN'];
+        let m2Chart = null, latestChart = null;
+
+        function renderCountrySelector() {
+            const grid = document.getElementById('countryGrid');
+            grid.innerHTML = Object.entries(M2_DATA).map(([code, info]) => `
+                <label class="country-checkbox">
+                    <input type="checkbox" value="${code}" ${selectedCountries.includes(code) ? 'checked' : ''} 
+                           onchange="toggleCountry('${code}', this.checked)">
+                    <div class="country-info">
+                        <span class="country-name">${info.name}</span>
+                        <span class="country-currency">${info.currency} • ${info.unit}</span>
+                    </div>
+                </label>
+            `).join('');
+        }
+
+        function toggleCountry(code, isChecked) {
+            selectedCountries = isChecked ? [...new Set([...selectedCountries, code])] : selectedCountries.filter(c => c !== code);
+            renderCharts();
+        }
+
+        function renderCharts() {
+            if (selectedCountries.length === 0) return;
+
+            const datasets = selectedCountries.map(code => {
+                const info = M2_DATA[code];
+                return {
+                    label: `${info.name} (${info.currency})`,
+                    data: info.data.map(d => d.value),
+                    borderColor: countryColors[code],
+                    backgroundColor: countryColors[code] + '20',
+                    fill: true,
+                    tension: 0.3,
+                    pointRadius: 3,
+                    pointHoverRadius: 6,
+                    borderWidth: 2,
+                    dates: info.data.map(d => d.date)
+                };
+            });
+
+            if (m2Chart) m2Chart.destroy();
+            if (latestChart) latestChart.destroy();
+
+            // Time series
+            m2Chart = new Chart(document.getElementById('m2Chart'), {
+                type: 'line',
+                data: { labels: datasets[0]?.dates || [], datasets: datasets },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: {
+                        legend: { position: 'top', labels: { color: '#fff', usePointStyle: true, padding: 20 } },
+                        tooltip: {
+                            backgroundColor: 'rgba(0,0,0,0.8)', titleColor: '#fff', bodyColor: '#fff',
+                            borderColor: '#333', borderWidth: 1, padding: 12,
+                            callbacks: {
+                                label: (ctx) => {
+                                    const code = selectedCountries[ctx.datasetIndex];
+                                    const unit = M2_DATA[code].unit.split(' ')[1];
+                                    return `${ctx.dataset.label}: ${ctx.parsed.y.toLocaleString()} ${unit}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: { grid: { color: '#2d3748' }, ticks: { color: '#a0aec0' } },
+                        y: { grid: { color: '#2d3748' }, ticks: { color: '#a0aec0' }, 
+                             title: { display: true, text: 'Money Supply (Local Currency)', color: '#a0aec0' } }
+                    }
+                }
+            });
+
+            // Latest values bar chart
+            const latestData = selectedCountries.map(code => {
+                const info = M2_DATA[code];
+                return { country: info.name, value: info.data[info.data.length - 1].value, 
+                        unit: info.unit, code: code };
+            });
+
+            latestChart = new Chart(document.getElementById('latestChart'), {
+                type: 'bar',
+                data: {
+                    labels: latestData.map(d => d.country),
+                    datasets: [{
+                        label: 'Latest M2 Value',
+                        data: latestData.map(d => d.value),
+                        backgroundColor: latestData.map(d => countryColors[d.code] + '80'),
+                        borderColor: latestData.map(d => countryColors[d.code]),
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: 'rgba(0,0,0,0.8)', titleColor: '#fff', bodyColor: '#fff',
+                            borderColor: '#333', borderWidth: 1, padding: 12,
+                            callbacks: { label: (ctx) => `${ctx.raw.toLocaleString()} ${latestData[ctx.dataIndex].unit}` }
+                        }
+                    },
+                    scales: {
+                        x: { grid: { display: false }, ticks: { color: '#fff' } },
+                        y: { grid: { color: '#2d3748' }, ticks: { color: '#a0aec0' } }
+                    }
+                }
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCountrySelector();
+            renderCharts();
+        });
+    </script>
+</body>
+</html>
