@@ -1,567 +1,557 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M2 Money Supply Tracker | Global Economic Data</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-    <style>
-        :root {
-            --bg-primary: #0a0e1a;
-            --bg-secondary: #12182b;
-            --bg-card: #1a2342;
-            --text-primary: #ffffff;
-            --text-secondary: #a0aec0;
-            --accent-primary: #00d4ff;
-            --accent-secondary: #7b68ee;
-            --border-color: #2d3748;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M2 Money Supply Tracker — Long History, Common-Currency Basis</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121c31;
+      --card-2: #18243f;
+      --text: #e8edf8;
+      --muted: #a8b3cc;
+      --line: #2a3755;
+      --primary: #56ccf2;
+      --accent: #9b8cff;
+      --danger: #ff7d7d;
+      --ok: #4dd4ac;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at top, #16233d, #0b1220 45%);
+      color: var(--text);
+      min-height: 100vh;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            min-height: 100vh;
-            line-height: 1.6;
-        }
+    .wrap {
+      max-width: 1480px;
+      margin: 0 auto;
+      padding: 24px;
+    }
 
-        header {
-            background: var(--bg-secondary);
-            padding: 1.5rem 2rem;
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    .hero {
+      background: linear-gradient(160deg, rgba(86, 204, 242, 0.16), rgba(155, 140, 255, 0.12));
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+    }
 
-        .header-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      letter-spacing: 0.2px;
+    }
 
-        h1 {
-            font-size: 1.75rem;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+    .sub {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
 
-        .subtitle {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-top: 0.25rem;
-        }
+    .grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 16px;
+    }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+    }
 
-        .country-selector {
-            background: var(--bg-card);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border: 1px solid var(--border-color);
-        }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 1.02rem;
+      color: #dfe8ff;
+    }
 
-        .selector-title {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
+    .row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
 
-        .country-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 1rem;
-        }
+    label { font-size: 0.88rem; color: var(--muted); }
 
-        .country-checkbox {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem 1rem;
-            background: var(--bg-secondary);
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s;
-            border: 1px solid var(--border-color);
-        }
+    select {
+      background: var(--card-2);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 6px 8px;
+      min-width: 90px;
+    }
 
-        .country-checkbox:hover {
-            border-color: var(--accent-primary);
-        }
+    .country-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+      max-height: 360px;
+      overflow: auto;
+      padding-right: 4px;
+    }
 
-        .country-checkbox input {
-            width: 18px;
-            height: 18px;
-            accent-color: var(--accent-primary);
-        }
+    .country-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: var(--card-2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 0.9rem;
+    }
 
-        .country-info {
-            display: flex;
-            flex-direction: column;
-        }
+    .country-item .meta {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
 
-        .country-name {
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 3px 8px;
+      background: rgba(255,255,255,0.03);
+      color: var(--muted);
+      font-size: 0.75rem;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
 
-        .country-currency {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-        }
+    .chart-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 16px;
+    }
 
-        .chart-container {
-            background: var(--bg-card);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border: 1px solid var(--border-color);
-        }
+    .chart-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
 
-        .chart-title {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
-        }
+    .chart-title h3 {
+      margin: 0;
+      font-size: 1.02rem;
+    }
 
-        .chart-wrapper {
-            position: relative;
-            height: 400px;
-        }
+    .chart-title .small {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
 
-        .update-time {
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            margin-top: 1rem;
-        }
+    .canvas-wrap { height: 440px; }
+    .canvas-wrap.small { height: 280px; }
 
-        .sources-section {
-            background: var(--bg-card);
-            border-radius: 12px;
-            padding: 1.5rem;
-            border: 1px solid var(--border-color);
-        }
+    .sources li {
+      margin-bottom: 7px;
+      color: var(--muted);
+      line-height: 1.35;
+    }
 
-        .sources-title {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
+    a { color: var(--primary); }
 
-        .sources-list {
-            list-style: none;
-        }
+    .note {
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.45;
+      background: rgba(255,255,255,0.02);
+      border-left: 3px solid var(--accent);
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
 
-        .source-item {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--border-color);
-            color: var(--text-secondary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(120px, 1fr));
+      gap: 10px;
+      margin-top: 8px;
+    }
 
-        .source-item:last-child {
-            border-bottom: none;
-        }
+    .kpi {
+      border: 1px solid var(--line);
+      background: var(--card-2);
+      border-radius: 10px;
+      padding: 8px 9px;
+    }
 
-        .source-link {
-            color: var(--accent-primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
+    .kpi .k { color: var(--muted); font-size: 0.76rem; }
+    .kpi .v { margin-top: 2px; font-size: 0.95rem; }
 
-        .source-link:hover {
-            text-decoration: underline;
-        }
-
-        .loading {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 400px;
-            color: var(--text-secondary);
-            font-size: 1.2rem;
-        }
-
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 3px solid var(--border-color);
-            border-top: 3px solid var(--accent-primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-right: 1rem;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .disclaimer {
-            background: var(--bg-secondary);
-            border-radius: 8px;
-            padding: 1rem;
-            margin-top: 1rem;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            border-left: 3px solid var(--accent-secondary);
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            .country-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            }
-            
-            .chart-wrapper {
-                height: 300px;
-            }
-        }
-    </style>
+    @media (max-width: 1080px) {
+      .grid { grid-template-columns: 1fr; }
+      .canvas-wrap { height: 360px; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div>
-                <h1>M2 Money Supply Tracker</h1>
-                <div class="subtitle">Compare broad money supply across major economies</div>
-            </div>
-        </div>
-    </header>
+  <div class="wrap">
+    <section class="hero">
+      <h1>M2 Money Supply Tracker (Long History)</h1>
+      <div class="sub">
+        Comparison is converted into a <strong>single common basis</strong>: <strong>billions of selected base currency</strong>.
+        FX conversion uses annual rates (yfinance first, World Bank fallback).
+      </div>
+    </section>
 
-    <div class="container">
-        <div class="country-selector">
-            <div class="selector-title">Select countries to compare:</div>
-            <div class="country-grid" id="countryGrid">
-                <!-- Populated by JavaScript -->
-            </div>
-        </div>
+    <div class="grid">
+      <aside>
+        <section class="card">
+          <h2>Controls</h2>
+          <div class="row">
+            <label for="baseCurrency">Base currency</label>
+            <select id="baseCurrency"></select>
+          </div>
+          <div class="row">
+            <label for="startYear">Start year</label>
+            <select id="startYear"></select>
+            <label for="endYear">End year</label>
+            <select id="endYear"></select>
+          </div>
 
-        <div class="chart-container">
-            <div class="chart-title">M2 Money Supply Over Time</div>
-            <div class="chart-wrapper">
-                <canvas id="m2Chart"></canvas>
-            </div>
-            <div class="update-time" id="updateTime">-</div>
-        </div>
+          <div class="row" style="margin-top: 12px;"><label>Countries to compare</label></div>
+          <div id="countryList" class="country-list"></div>
 
-        <div class="chart-container">
-            <div class="chart-title">Latest M2 Values (Normalized)</div>
-            <div class="chart-wrapper">
-                <canvas id="latestChart"></canvas>
-            </div>
-        </div>
+          <div class="note">
+            Hover any point on the chart to see year-specific values and <strong>major economic/political event tags</strong>.
+          </div>
+        </section>
 
-        <div class="sources-section">
-            <div class="sources-title">Data Sources</div>
-            <ul class="sources-list" id="sourcesList">
-                <li class="source-item">
-                    <span>🇺🇸</span>
-                    <span>Federal Reserve - M2 Money Stock</span>
-                    <a href="https://fred.stlouisfed.org/series/M2SL" target="_blank" class="source-link">View Source →</a>
-                </li>
-                <li class="source-item">
-                    <span>🇪🇺</span>
-                    <span>European Central Bank - M2 for Euro Area</span>
-                    <a href="https://www.ecb.europa.eu/stats/money/aggregates/ecb_definitions/en/html/index.en.html" target="_blank" class="source-link">View Source →</a>
-                </li>
-                <li class="source-item">
-                    <span>🇨🇳</span>
-                    <span>People's Bank of China - Money Supply Statistics</span>
-                    <a href="http://www.pbc.gov.cn/en/3688110/3688172/index.html" target="_blank" class="source-link">View Source →</a>
-                </li>
-                <li class="source-item">
-                    <span>🇯🇵</span>
-                    <span>Bank of Japan - Money Stock</span>
-                    <a href="https://www.boj.or.jp/en/statistics/ms/ms.htm" target="_blank" class="source-link">View Source →</a>
-                </li>
-                <li class="source-item">
-                    <span>🇬🇧</span>
-                    <span>Bank of England - M2 Money Supply</span>
-                    <a href="https://www.bankofengland.co.uk/statistics" target="_blank" class="source-link">View Source →</a>
-                </li>
-                <li class="source-item">
-                    <span>🌍</span>
-                    <span>World Bank - Money Supply Data</span>
-                    <a href="https://data.worldbank.org/indicator/FM.LBL.MQMY.CN" target="_blank" class="source-link">View Source →</a>
-                </li>
-            </ul>
-            <div class="disclaimer">
-                <strong>Disclaimer:</strong> Data shown is approximate and based on historical records from public sources. 
-                Different countries define and measure M2 differently. For precise comparisons, consider exchange rates and 
-                purchasing power parity. This tool is for educational purposes only.
-            </div>
-        </div>
+        <section class="card" style="margin-top: 12px;">
+          <h2>Cited data sources</h2>
+          <ul class="sources">
+            <li>
+              World Bank Broad Money (Current LCU, <code>FM.LBL.BMNY.CN</code>) —
+              <a target="_blank" href="https://data.worldbank.org/indicator/FM.LBL.BMNY.CN">link</a>
+            </li>
+            <li>
+              World Bank Broad Money Growth (Annual %, <code>FM.LBL.BMNY.ZG</code>) —
+              <a target="_blank" href="https://data.worldbank.org/indicator/FM.LBL.BMNY.ZG">link</a>
+            </li>
+            <li>
+              World Bank Lending Interest Rate (%, <code>FR.INR.LEND</code>) —
+              <a target="_blank" href="https://data.worldbank.org/indicator/FR.INR.LEND">link</a>
+            </li>
+            <li>
+              World Bank Official FX (LCU/USD, <code>PA.NUS.FCRF</code>) fallback —
+              <a target="_blank" href="https://data.worldbank.org/indicator/PA.NUS.FCRF">link</a>
+            </li>
+            <li>
+              Yahoo Finance (via yfinance) FX time series —
+              <a target="_blank" href="https://finance.yahoo.com/">link</a>
+            </li>
+          </ul>
+          <div class="note">
+            Cross-country levels are comparable only after FX conversion to a base currency; however,
+            institutional definitions of broad money still differ by country.
+          </div>
+        </section>
+      </aside>
+
+      <main>
+        <section class="chart-card">
+          <div class="chart-title">
+            <h3>M2 level (common basis)</h3>
+            <div class="small" id="subtitle"></div>
+          </div>
+          <div id="eventPills"></div>
+          <div class="canvas-wrap"><canvas id="m2Chart"></canvas></div>
+          <div class="kpi-row">
+            <div class="kpi"><div class="k">Latest year in view</div><div class="v" id="kpiYear">-</div></div>
+            <div class="kpi"><div class="k">Largest selected economy (latest)</div><div class="v" id="kpiTop">-</div></div>
+            <div class="kpi"><div class="k">Median M2 (latest)</div><div class="v" id="kpiMedian">-</div></div>
+          </div>
+        </section>
+
+        <section class="chart-card">
+          <div class="chart-title">
+            <h3>Latest comparison (same basis)</h3>
+            <div class="small">Bars are in billions of selected base currency</div>
+          </div>
+          <div class="canvas-wrap small"><canvas id="latestChart"></canvas></div>
+        </section>
+      </main>
     </div>
+  </div>
 
-    <script>
-        const API_BASE = window.location.pathname === '/' ? '/api' : './api';
-        let m2Chart = null;
-        let latestChart = null;
-        let availableCountries = [];
-        let selectedCountries = ['US', 'CN'];
+  <script>
+    const COLORS = ['#56ccf2', '#9b8cff', '#4dd4ac', '#f2c94c', '#ff7d7d', '#6fcf97', '#b4a1ff', '#f2994a', '#2f80ed'];
+    let payload = null;
+    let m2Chart = null;
+    let latestChart = null;
 
-        const countryColors = {
-            'US': '#00d4ff',
-            'CN': '#ff6b6b',
-            'EU': '#7b68ee',
-            'JP': '#4ecdc4',
-            'GB': '#ff9f43'
-        };
+    const els = {
+      baseCurrency: document.getElementById('baseCurrency'),
+      startYear: document.getElementById('startYear'),
+      endYear: document.getElementById('endYear'),
+      countryList: document.getElementById('countryList'),
+      subtitle: document.getElementById('subtitle'),
+      eventPills: document.getElementById('eventPills'),
+      kpiYear: document.getElementById('kpiYear'),
+      kpiTop: document.getElementById('kpiTop'),
+      kpiMedian: document.getElementById('kpiMedian'),
+    };
 
-        // Initialize
-        document.addEventListener('DOMContentLoaded', async () => {
-            await loadCountries();
-            await loadData();
+    function fmt(n) {
+      if (n == null || Number.isNaN(n)) return '—';
+      return new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 }).format(n);
+    }
+
+    function getAvailableCountries() {
+      return Object.entries(payload.countries)
+        .filter(([_, c]) => Array.isArray(c.annual) && c.annual.length >= 12)
+        .sort((a, b) => (a[1].gdpRank || 999) - (b[1].gdpRank || 999));
+    }
+
+    function selectedCountryCodes() {
+      return [...els.countryList.querySelectorAll('input[type=checkbox]:checked')].map(i => i.value);
+    }
+
+    function yearsRange() {
+      return {
+        start: Number(els.startYear.value),
+        end: Number(els.endYear.value),
+      };
+    }
+
+    function usdPerCurrency(ccy, year) {
+      const v = payload.fx?.usdPerCurrency?.[ccy]?.[String(year)] ?? payload.fx?.usdPerCurrency?.[ccy]?.[year];
+      if (v == null || !Number.isFinite(Number(v))) return null;
+      return Number(v);
+    }
+
+    function localToBase(localValue, localCcy, baseCcy, year) {
+      const usdLocal = usdPerCurrency(localCcy, year);
+      const usdBase = usdPerCurrency(baseCcy, year);
+      if (!usdLocal || !usdBase) return null;
+      return (localValue * usdLocal / usdBase) / 1e9; // billions of base currency
+    }
+
+    function populateControls() {
+      const countries = getAvailableCountries();
+      const years = [];
+      for (let y = payload.meta.startYear; y <= payload.meta.endYear; y++) years.push(y);
+
+      // Base currency selector
+      const baseOptions = payload.fx.baseCurrencies || ['USD'];
+      els.baseCurrency.innerHTML = baseOptions.map(ccy => `<option value="${ccy}">${ccy}</option>`).join('');
+      els.baseCurrency.value = 'USD';
+
+      // Year selectors
+      els.startYear.innerHTML = years.map(y => `<option value="${y}">${y}</option>`).join('');
+      els.endYear.innerHTML = years.map(y => `<option value="${y}">${y}</option>`).join('');
+      els.startYear.value = String(Math.max(payload.meta.startYear, payload.meta.endYear - 25));
+      els.endYear.value = String(payload.meta.endYear);
+
+      // Country checkboxes
+      const defaultCodes = countries.slice(0, 5).map(([code]) => code);
+      els.countryList.innerHTML = countries.map(([code, c]) => {
+        const checked = defaultCodes.includes(code) ? 'checked' : '';
+        return `
+          <label class="country-item">
+            <div>
+              <div><strong>${c.name}</strong> (${code})</div>
+              <div class="meta">${c.currency} • GDP rank ${c.gdpRank || 'n/a'}</div>
+            </div>
+            <input type="checkbox" value="${code}" ${checked} />
+          </label>
+        `;
+      }).join('');
+
+      // Events pills
+      els.eventPills.innerHTML = payload.events
+        .sort((a, b) => a.year - b.year)
+        .map(ev => `<span class="pill">${ev.year}: ${ev.title}</span>`)
+        .join('');
+
+      [els.baseCurrency, els.startYear, els.endYear, ...els.countryList.querySelectorAll('input')]
+        .forEach(el => el.addEventListener('change', render));
+    }
+
+    function render() {
+      const codes = selectedCountryCodes();
+      if (!codes.length) return;
+
+      const { start, end } = yearsRange();
+      if (start > end) {
+        els.subtitle.textContent = 'Invalid range: start year must be <= end year';
+        return;
+      }
+
+      const base = els.baseCurrency.value;
+      const years = [];
+      for (let y = start; y <= end; y++) years.push(y);
+
+      const datasets = codes.map((code, idx) => {
+        const c = payload.countries[code];
+        const m2ByYear = Object.fromEntries(c.annual.map(r => [Number(r.year), Number(r.m2_local)]));
+
+        const series = years.map(y => {
+          if (!(y in m2ByYear)) return null;
+          return localToBase(m2ByYear[y], c.currency, base, y);
         });
 
-        async function loadCountries() {
-            try {
-                const response = await fetch(`${API_BASE}/countries`);
-                const data = await response.json();
-                availableCountries = data.countries;
-                renderCountrySelector();
-            } catch (error) {
-                console.error('Error loading countries:', error);
-                document.getElementById('countryGrid').innerHTML = 
-                    '<p style="color: #ff6b6b;">Error loading countries. Please refresh.</p>';
-            }
-        }
+        return {
+          code,
+          label: `${c.name} (${code})`,
+          data: series,
+          borderColor: COLORS[idx % COLORS.length],
+          backgroundColor: COLORS[idx % COLORS.length] + '44',
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 4,
+          tension: 0.2,
+          fill: false,
+        };
+      });
 
-        function renderCountrySelector() {
-            const grid = document.getElementById('countryGrid');
-            grid.innerHTML = availableCountries.map(country => `
-                <label class="country-checkbox">
-                    <input type="checkbox" 
-                           value="${country.code}" 
-                           ${selectedCountries.includes(country.code) ? 'checked' : ''}
-                           onchange="toggleCountry('${country.code}', this.checked)">
-                    <div class="country-info">
-                        <span class="country-name">${country.name}</span>
-                        <span class="country-currency">${country.currency} • ${country.unit}</span>
-                    </div>
-                </label>
-            `).join('');
-        }
+      const eventByYear = {};
+      for (const ev of payload.events || []) {
+        if (!eventByYear[ev.year]) eventByYear[ev.year] = [];
+        eventByYear[ev.year].push(ev);
+      }
 
-        function toggleCountry(code, isChecked) {
-            if (isChecked) {
-                if (!selectedCountries.includes(code)) {
-                    selectedCountries.push(code);
+      if (m2Chart) m2Chart.destroy();
+      m2Chart = new Chart(document.getElementById('m2Chart'), {
+        type: 'line',
+        data: { labels: years, datasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: {
+              labels: { color: '#d9e4ff', usePointStyle: true, boxWidth: 8 }
+            },
+            tooltip: {
+              backgroundColor: 'rgba(8,11,18,0.94)',
+              titleColor: '#fff',
+              bodyColor: '#d8e4ff',
+              borderColor: '#2f3b5b',
+              borderWidth: 1,
+              callbacks: {
+                title: (items) => `Year ${items?.[0]?.label ?? ''}`,
+                label: (ctx) => `${ctx.dataset.label}: ${fmt(ctx.parsed.y)} bn ${base}`,
+                afterBody: (items) => {
+                  const year = Number(items?.[0]?.label);
+                  const evs = eventByYear[year] || [];
+                  if (!evs.length) return [];
+                  return ['', 'Major events:', ...evs.map(e => `• ${e.title}: ${e.detail}`)];
                 }
-            } else {
-                selectedCountries = selectedCountries.filter(c => c !== code);
+              }
             }
-            loadData();
-        }
-
-        async function loadData() {
-            if (selectedCountries.length === 0) {
-                selectedCountries = ['US'];
+          },
+          scales: {
+            x: {
+              ticks: { color: '#9fb0d0', maxTicksLimit: 12 },
+              grid: { color: '#23314d' }
+            },
+            y: {
+              ticks: { color: '#9fb0d0' },
+              grid: { color: '#23314d' },
+              title: {
+                display: true,
+                text: `Billions of ${base} (common basis)`,
+                color: '#b9c8e6'
+              }
             }
+          }
+        }
+      });
 
-            try {
-                const response = await fetch(
-                    `${API_BASE}/m2?countries=${selectedCountries.join(',')}`
-                );
-                const data = await response.json();
-                
-                document.getElementById('updateTime').textContent = 
-                    `Last updated: ${new Date(data.lastUpdated).toLocaleString()}`;
-                
-                renderCharts(data.countries);
-            } catch (error) {
-                console.error('Error loading data:', error);
+      // Latest bar chart (last year in range with available data)
+      const latestValues = [];
+      for (const d of datasets) {
+        let latestIdx = -1;
+        for (let i = d.data.length - 1; i >= 0; i--) {
+          if (d.data[i] != null && Number.isFinite(d.data[i])) { latestIdx = i; break; }
+        }
+        if (latestIdx >= 0) {
+          latestValues.push({
+            code: d.code,
+            label: d.label,
+            year: years[latestIdx],
+            value: d.data[latestIdx],
+            color: d.borderColor,
+          });
+        }
+      }
+
+      latestValues.sort((a, b) => b.value - a.value);
+
+      if (latestChart) latestChart.destroy();
+      latestChart = new Chart(document.getElementById('latestChart'), {
+        type: 'bar',
+        data: {
+          labels: latestValues.map(v => v.label),
+          datasets: [{
+            data: latestValues.map(v => v.value),
+            backgroundColor: latestValues.map(v => v.color + 'aa'),
+            borderColor: latestValues.map(v => v.color),
+            borderWidth: 1.5,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => `${fmt(ctx.raw)} bn ${base}`,
+                afterLabel: (ctx) => `Latest year: ${latestValues[ctx.dataIndex].year}`,
+              }
             }
+          },
+          scales: {
+            x: { ticks: { color: '#c8d6f1' }, grid: { display: false } },
+            y: { ticks: { color: '#9fb0d0' }, grid: { color: '#23314d' }, title: { display: true, text: `bn ${base}`, color: '#b9c8e6' } }
+          }
         }
+      });
 
-        function renderCharts(countriesData) {
-            const ctx = document.getElementById('m2Chart').getContext('2d');
-            const ctx2 = document.getElementById('latestChart').getContext('2d');
+      // KPIs
+      const latestYears = latestValues.map(v => v.year);
+      const commonLatestYear = latestYears.length ? Math.max(...latestYears) : null;
+      const top = latestValues[0];
+      const med = latestValues.length ? latestValues[Math.floor((latestValues.length - 1) / 2)].value : null;
 
-            // Prepare datasets for time series
-            const datasets = Object.entries(countriesData).map(([code, info]) => {
-                const dates = info.data.map(d => d.date);
-                const values = info.data.map(d => d.value);
-                
-                return {
-                    label: `${info.name} (${info.currency})`,
-                    data: values,
-                    borderColor: countryColors[code] || '#999',
-                    backgroundColor: countryColors[code] + '20' || '#99999920',
-                    fill: true,
-                    tension: 0.3,
-                    pointRadius: 3,
-                    pointHoverRadius: 6,
-                    borderWidth: 2,
-                    dates: dates
-                };
-            });
+      els.kpiYear.textContent = commonLatestYear ?? '—';
+      els.kpiTop.textContent = top ? `${top.label}: ${fmt(top.value)} bn ${base}` : '—';
+      els.kpiMedian.textContent = med != null ? `${fmt(med)} bn ${base}` : '—';
 
-            // Destroy existing charts
-            if (m2Chart) m2Chart.destroy();
-            if (latestChart) latestChart.destroy();
+      els.subtitle.textContent = `Window: ${start}–${end} | Base currency: ${base} | Countries: ${codes.length}`;
+    }
 
-            // Time series chart
-            m2Chart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: datasets[0]?.dates || [],
-                    datasets: datasets
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    interaction: {
-                        mode: 'index',
-                        intersect: false,
-                    },
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                            labels: {
-                                color: '#fff',
-                                usePointStyle: true,
-                                padding: 20
-                            }
-                        },
-                        tooltip: {
-                            backgroundColor: 'rgba(0,0,0,0.8)',
-                            titleColor: '#fff',
-                            bodyColor: '#fff',
-                            borderColor: '#333',
-                            borderWidth: 1,
-                            padding: 12,
-                            callbacks: {
-                                label: function(context) {
-                                    const code = Object.keys(countriesData)[context.datasetIndex];
-                                    const unit = countriesData[code].unit;
-                                    const value = context.parsed.y;
-                                    return `${context.dataset.label}: ${value.toLocaleString()} ${unit.split(' ')[1]}`;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            grid: {
-                                color: '#2d3748'
-                            },
-                            ticks: {
-                                color: '#a0aec0'
-                            }
-                        },
-                        y: {
-                            grid: {
-                                color: '#2d3748'
-                            },
-                            ticks: {
-                                color: '#a0aec0'
-                            },
-                            title: {
-                                display: true,
-                                text: 'Money Supply (Local Currency)',
-                                color: '#a0aec0'
-                            }
-                        }
-                    }
-                }
-            });
+    async function boot() {
+      const res = await fetch('./data/m2_long_history.json');
+      payload = await res.json();
+      populateControls();
+      render();
+    }
 
-            // Latest values comparison (bar chart)
-            const latestData = Object.entries(countriesData).map(([code, info]) => {
-                const latest = info.data[info.data.length - 1];
-                return {
-                    country: info.name,
-                    value: latest.value,
-                    unit: info.unit,
-                    code: code
-                };
-            });
-
-            latestChart = new Chart(ctx2, {
-                type: 'bar',
-                data: {
-                    labels: latestData.map(d => d.country),
-                    datasets: [{
-                        label: 'Latest M2 Value',
-                        data: latestData.map(d => d.value),
-                        backgroundColor: latestData.map(d => countryColors[d.code] + '80' || '#99999980'),
-                        borderColor: latestData.map(d => countryColors[d.code] || '#999'),
-                        borderWidth: 2
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            backgroundColor: 'rgba(0,0,0,0.8)',
-                            titleColor: '#fff',
-                            bodyColor: '#fff',
-                            borderColor: '#333',
-                            borderWidth: 1,
-                            padding: 12,
-                            callbacks: {
-                                label: function(context) {
-                                    const data = latestData[context.dataIndex];
-                                    return `${data.value.toLocaleString()} ${data.unit}`;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            grid: {
-                                display: false
-                            },
-                            ticks: {
-                                color: '#fff'
-                            }
-                        },
-                        y: {
-                            grid: {
-                                color: '#2d3748'
-                            },
-                            ticks: {
-                                color: '#a0aec0'
-                            },
-                            title: {
-                                display: true,
-                                text: 'Money Supply (Local Currency Units)',
-                                color: '#a0aec0'
-                            }
-                        }
-                    }
-                }
-            });
-        }
-    </script>
+    boot().catch(err => {
+      console.error(err);
+      document.body.innerHTML = `<pre style="padding:20px;color:#ff9d9d">Failed to load data: ${String(err)}</pre>`;
+    });
+  </script>
 </body>
 </html>

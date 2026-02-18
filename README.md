@@ -1,74 +1,68 @@
 # M2 Money Supply Tracker
 
-A web application that tracks and visualizes M2 money supply data for the world's largest economies.
+Long-history tracker for broad money (M2 proxy) across major economies, with conversion into a **single common basis**.
 
-## Overview
+## What this app now does
 
-This application provides:
-- **Real-time M2 visualization** for major economies (US, China, EU, Japan, UK)
-- **Interactive comparison** - Select any combination of countries
-- **Historical trends** - View M2 data from 2018 to present
-- **Cited sources** - All data clearly attributed to official central bank sources
+- Uses long-run annual data (1980 onward, where available)
+- Lets user select countries to compare
+- Lets user select base currency (USD/EUR/CNY/JPY/GBP/INR)
+- Converts all selected series into **billions of base currency** (no mixed trillion/billion basis)
+- Shows major economic/political event tags in chart hover tooltips
+- Cites public sources directly in the UI
 
-## Features
+## Data architecture
 
-### 🌍 Country Coverage
-| Country | Currency | Data Source |
-|---------|----------|-------------|
-| United States | USD | Federal Reserve |
-| China | CNY | People's Bank of China |
-| Euro Area | EUR | European Central Bank |
-| Japan | JPY | Bank of Japan |
-| United Kingdom | GBP | Bank of England |
+### Core macro data (World Bank)
+- Broad money (current LCU): `FM.LBL.BMNY.CN`
+- Broad money growth (annual %): `FM.LBL.BMNY.ZG`
+- Lending interest rate (%): `FR.INR.LEND`
+- Official exchange rate fallback (LCU per USD): `PA.NUS.FCRF`
 
-### 📊 Visualizations
-- **Time Series Chart** - Track M2 growth over time
-- **Bar Chart** - Compare latest values across selected countries
+### FX conversion data
+- Primary: Yahoo Finance via `yfinance`
+- Fallback: World Bank `PA.NUS.FCRF`
 
-## Data Sources
+## Build pipeline
 
-All data is sourced from official public sources:
-
-1. **Federal Reserve Economic Data (FRED)** - US M2 Money Stock
-   - https://fred.stlouisfed.org/series/M2SL
-
-2. **European Central Bank** - M2 for Euro Area
-   - https://www.ecb.europa.eu/stats/
-
-3. **People's Bank of China** - Money Supply Statistics
-   - http://www.pbc.gov.cn/en/
-
-4. **Bank of Japan** - Money Stock
-   - https://www.boj.or.jp/en/statistics/ms/ms.htm
-
-5. **Bank of England** - M2 Money Supply
-   - https://www.bankofengland.co.uk/statistics
-
-6. **World Bank** - Global Money Supply Data
-   - https://data.worldbank.org/indicator/FM.LBL.MQMY.CN
-
-## Disclaimer
-
-> Data shown is approximate and based on historical records from public sources. Different countries define and measure M2 differently. For precise comparisons, consider exchange rates and purchasing power parity. This tool is for educational purposes only.
-
-## Setup
+Generate dataset:
 
 ```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the application
-python app.py
-
-# Open browser to http://localhost:5000
+/home/piclaw/.openclaw/workspace/.venv/bin/python scripts/build_m2_dataset.py
 ```
 
-## Technologies
+Output files:
+- `docs/data/m2_long_history.json`
+- `static/data/m2_long_history.json`
 
-- **Backend**: Python Flask
-- **Frontend**: Vanilla JavaScript with Chart.js
-- **Data**: Public APIs from central banks
+Run quantitative summary used by report:
+
+```bash
+/home/piclaw/.openclaw/workspace/.venv/bin/python scripts/analyze_m2_macro_links.py
+```
+
+Output:
+- `reports/m2_macro_analysis_summary.json`
+
+## Run locally
+
+```bash
+pip install -r requirements.txt
+python app.py
+# open http://localhost:5000
+```
+
+## GitHub Pages
+
+The deployed site serves from:
+- `docs/index.html`
+- `docs/data/m2_long_history.json`
+
+## Notes on comparability
+
+- Even after FX conversion, cross-country money aggregates are only approximately comparable because monetary definitions and financial structures differ.
+- Use this as a macro-analytical tool, not a mechanical ranking instrument.
 
 ## License
 
-MIT License - Free for educational and research purposes.
+MIT
