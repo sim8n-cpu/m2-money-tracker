@@ -1,11 +1,14 @@
 {
   "meta": {
-    "generatedAt": "2026-02-18T00:48:42.191300+00:00",
+    "generatedAt": "2026-02-18T05:44:36.244247+00:00",
     "startYear": 1980,
     "endYear": 2025,
     "unitPolicy": "All comparisons rendered as billions of selected base currency.",
     "notes": [
-      "M2 proxy uses World Bank broad money (FM.LBL.BMNY.CN).",
+      "M2 primary source: World Bank broad money (FM.LBL.BMNY.CN).",
+      "Gap-filling source: OECD monetary aggregates (M3=MABM; fallback M1=MANM), annual XDC.",
+      "DE/FR/IT gap fill: EA19 aggregate allocated by country GDP share within EMU, then globally calibrated.",
+      "Residual gaps are filled via WB growth-chain and interpolation.",
       "FX conversion uses yfinance annual average close where available; World Bank PA.NUS.FCRF fallback otherwise.",
       "Cross-country comparability is indicative because national aggregate definitions differ."
     ]
@@ -21,271 +24,323 @@
           "year": 1980,
           "m2_local": 1986011000000.0,
           "m2_growth_pct": 10.6793254282949,
-          "lending_rate_pct": 15.2658333333333
+          "lending_rate_pct": 15.2658333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1981,
           "m2_local": 2225612000000.0,
           "m2_growth_pct": 12.0644346884282,
-          "lending_rate_pct": 18.87
+          "lending_rate_pct": 18.87,
+          "m2_source": "worldbank"
         },
         {
           "year": 1982,
           "m2_local": 2448890000000.0,
           "m2_growth_pct": 10.032206871638,
-          "lending_rate_pct": 14.8608333333333
+          "lending_rate_pct": 14.8608333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1983,
           "m2_local": 2651444000000.0,
           "m2_growth_pct": 8.27125759017351,
-          "lending_rate_pct": 10.7941666666667
+          "lending_rate_pct": 10.7941666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1984,
           "m2_local": 2983758000000.0,
           "m2_growth_pct": 12.5333214655863,
-          "lending_rate_pct": 12.0425
+          "lending_rate_pct": 12.0425,
+          "m2_source": "worldbank"
         },
         {
           "year": 1985,
           "m2_local": 3231204000000.0,
           "m2_growth_pct": 8.29309883710408,
-          "lending_rate_pct": 9.93333333333333
+          "lending_rate_pct": 9.93333333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1986,
           "m2_local": 3534144000000.0,
           "m2_growth_pct": 9.37545261766202,
-          "lending_rate_pct": 8.3325
+          "lending_rate_pct": 8.3325,
+          "m2_source": "worldbank"
         },
         {
           "year": 1987,
           "m2_local": 3677790000000.0,
           "m2_growth_pct": 4.06452029119357,
-          "lending_rate_pct": 8.20333333333333
+          "lending_rate_pct": 8.20333333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1988,
           "m2_local": 3927548000000.0,
           "m2_growth_pct": 6.79098045293505,
-          "lending_rate_pct": 9.315
+          "lending_rate_pct": 9.315,
+          "m2_source": "worldbank"
         },
         {
           "year": 1989,
           "m2_local": 4136390000000.0,
           "m2_growth_pct": 5.31736340332442,
-          "lending_rate_pct": 10.8733333333333
+          "lending_rate_pct": 10.8733333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1990,
           "m2_local": 4247161000000.0,
           "m2_growth_pct": 2.67796315144365,
-          "lending_rate_pct": 10.0091666666667
+          "lending_rate_pct": 10.0091666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1991,
           "m2_local": 4310890000000.0,
           "m2_growth_pct": 1.50050822184513,
-          "lending_rate_pct": 8.46333333333333
+          "lending_rate_pct": 8.46333333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1992,
           "m2_local": 4304287000000.0,
           "m2_growth_pct": -0.153170227029685,
-          "lending_rate_pct": 6.25166666666667
+          "lending_rate_pct": 6.25166666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1993,
           "m2_local": 4329959000000.0,
           "m2_growth_pct": 0.596428630339938,
-          "lending_rate_pct": 6.0
+          "lending_rate_pct": 6.0,
+          "m2_source": "worldbank"
         },
         {
           "year": 1994,
           "m2_local": 4347481000000.0,
           "m2_growth_pct": 0.404668958759194,
-          "lending_rate_pct": 7.13833333333333
+          "lending_rate_pct": 7.13833333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1995,
           "m2_local": 4646119000000.0,
           "m2_growth_pct": 6.86921920992869,
-          "lending_rate_pct": 8.82916666666667
+          "lending_rate_pct": 8.82916666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1996,
           "m2_local": 5011559000000.0,
           "m2_growth_pct": 7.86548945474707,
-          "lending_rate_pct": 8.27083333333333
+          "lending_rate_pct": 8.27083333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1997,
           "m2_local": 5412659000000.0,
           "m2_growth_pct": 8.0034975144461,
-          "lending_rate_pct": 8.44166666666667
+          "lending_rate_pct": 8.44166666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1998,
           "m2_local": 5932377000000.0,
           "m2_growth_pct": 9.6018980689528,
-          "lending_rate_pct": 8.35416666666667
+          "lending_rate_pct": 8.35416666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1999,
           "m2_local": 6496459000000.0,
           "m2_growth_pct": 9.508532583145,
-          "lending_rate_pct": 7.99416666666667
+          "lending_rate_pct": 7.99416666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2000,
           "m2_local": 7023352000000.0,
           "m2_growth_pct": 8.11046448534502,
-          "lending_rate_pct": 9.23333333333333
+          "lending_rate_pct": 9.23333333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2001,
           "m2_local": 7580500198181.05,
           "m2_growth_pct": 7.9327961660052,
-          "lending_rate_pct": 6.92166666666667
+          "lending_rate_pct": 6.92166666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2002,
           "m2_local": 7917998720540.51,
           "m2_growth_pct": 4.4521933056666,
-          "lending_rate_pct": 4.675
+          "lending_rate_pct": 4.675,
+          "m2_source": "worldbank"
         },
         {
           "year": 2003,
           "m2_local": 8266683128541.8,
           "m2_growth_pct": 4.40369366436937,
-          "lending_rate_pct": 4.1225
+          "lending_rate_pct": 4.1225,
+          "m2_source": "worldbank"
         },
         {
           "year": 2004,
           "m2_local": 8741359853877.03,
           "m2_growth_pct": 5.74204572685685,
-          "lending_rate_pct": 4.34
+          "lending_rate_pct": 4.34,
+          "m2_source": "worldbank"
         },
         {
           "year": 2005,
           "m2_local": 9447094076739.34,
           "m2_growth_pct": 8.07350612101042,
-          "lending_rate_pct": 6.18916666666667
+          "lending_rate_pct": 6.18916666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2006,
           "m2_local": 10297599323202.7,
           "m2_growth_pct": 9.00282393246698,
-          "lending_rate_pct": 7.9575
+          "lending_rate_pct": 7.9575,
+          "m2_source": "worldbank"
         },
         {
           "year": 2007,
           "m2_local": 11503807526482.2,
           "m2_growth_pct": 11.7134893815654,
-          "lending_rate_pct": 8.05
+          "lending_rate_pct": 8.05,
+          "m2_source": "worldbank"
         },
         {
           "year": 2008,
           "m2_local": 12444255813345.6,
           "m2_growth_pct": 8.17510450082245,
-          "lending_rate_pct": 5.0875
+          "lending_rate_pct": 5.0875,
+          "m2_source": "worldbank"
         },
         {
           "year": 2009,
           "m2_local": 13130258002953.0,
           "m2_growth_pct": 5.51260115427482,
-          "lending_rate_pct": 3.25
+          "lending_rate_pct": 3.25,
+          "m2_source": "worldbank"
         },
         {
           "year": 2010,
           "m2_local": 12768868670908.1,
           "m2_growth_pct": -2.75233991566367,
-          "lending_rate_pct": 3.25
+          "lending_rate_pct": 3.25,
+          "m2_source": "worldbank"
         },
         {
           "year": 2011,
           "m2_local": 13622257521129.8,
           "m2_growth_pct": 6.68335521506313,
-          "lending_rate_pct": 3.25
+          "lending_rate_pct": 3.25,
+          "m2_source": "worldbank"
         },
         {
           "year": 2012,
           "m2_local": 14289978816859.1,
           "m2_growth_pct": 4.9016933844745,
-          "lending_rate_pct": 3.25
+          "lending_rate_pct": 3.25,
+          "m2_source": "worldbank"
         },
         {
           "year": 2013,
           "m2_local": 14933186984470.5,
           "m2_growth_pct": 4.50111351356626,
-          "lending_rate_pct": 3.25
+          "lending_rate_pct": 3.25,
+          "m2_source": "worldbank"
         },
         {
           "year": 2014,
           "m2_local": 15706487072700.0,
           "m2_growth_pct": 5.17839955418545,
-          "lending_rate_pct": 3.25
+          "lending_rate_pct": 3.25,
+          "m2_source": "worldbank"
         },
         {
           "year": 2015,
           "m2_local": 16200148206841.0,
           "m2_growth_pct": 3.14303976348123,
-          "lending_rate_pct": 3.26
+          "lending_rate_pct": 3.26,
+          "m2_source": "worldbank"
         },
         {
           "year": 2016,
           "m2_local": 16823761856960.4,
           "m2_growth_pct": 3.84943175924811,
-          "lending_rate_pct": 3.51166666666667
+          "lending_rate_pct": 3.51166666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2017,
           "m2_local": 17631631156299.0,
           "m2_growth_pct": 4.80195396372877,
-          "lending_rate_pct": 4.09666666666667
+          "lending_rate_pct": 4.09666666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2018,
           "m2_local": 18342259948911.8,
           "m2_growth_pct": 4.03042002361151,
-          "lending_rate_pct": 4.90416666666667
+          "lending_rate_pct": 4.90416666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2019,
           "m2_local": 19881523881838.0,
           "m2_growth_pct": 8.39189902015057,
-          "lending_rate_pct": 5.2825
+          "lending_rate_pct": 5.2825,
+          "m2_source": "worldbank"
         },
         {
           "year": 2020,
           "m2_local": 23301047844003.4,
           "m2_growth_pct": 17.1995063481486,
-          "lending_rate_pct": 3.54416666666667
+          "lending_rate_pct": 3.54416666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2021,
           "m2_local": 27228831699811.4,
           "m2_growth_pct": 16.8566833650737,
-          "lending_rate_pct": 3.25
+          "lending_rate_pct": 3.25,
+          "m2_source": "worldbank"
         },
         {
           "year": 2022,
           "m2_local": 26999346403778.4,
           "m2_growth_pct": -0.842802579864598,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2023,
           "m2_local": 27478961441083.4,
           "m2_growth_pct": 1.77639499168722,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2024,
           "m2_local": 28959213351104.1,
           "m2_growth_pct": 5.38685537004172,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
+        },
+        {
+          "year": 2025,
+          "m2_local": 29527418666506.453,
+          "m2_growth_pct": 1.9620882256481842,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_m3"
         }
       ]
     },
@@ -299,271 +354,323 @@
           "year": 1980,
           "m2_local": 167110000000.0,
           "m2_growth_pct": 25.8547974092484,
-          "lending_rate_pct": 5.039999999
+          "lending_rate_pct": 5.039999999,
+          "m2_source": "worldbank"
         },
         {
           "year": 1981,
           "m2_local": 197770000000.0,
           "m2_growth_pct": 18.3471964574233,
-          "lending_rate_pct": 5.039999999
+          "lending_rate_pct": 5.039999999,
+          "m2_source": "worldbank"
         },
         {
           "year": 1982,
           "m2_local": 226570000000.0,
           "m2_growth_pct": 14.5623704302978,
-          "lending_rate_pct": 7.199999999
+          "lending_rate_pct": 7.199999999,
+          "m2_source": "worldbank"
         },
         {
           "year": 1983,
           "m2_local": 271280000000.0,
           "m2_growth_pct": 19.7334157214106,
-          "lending_rate_pct": 7.199999999
+          "lending_rate_pct": 7.199999999,
+          "m2_source": "worldbank"
         },
         {
           "year": 1984,
           "m2_local": 359850000000.0,
           "m2_growth_pct": 32.6489236213506,
-          "lending_rate_pct": 7.199999999
+          "lending_rate_pct": 7.199999999,
+          "m2_source": "worldbank"
         },
         {
           "year": 1985,
           "m2_local": 487490000000.0,
           "m2_growth_pct": 35.470334861748,
-          "lending_rate_pct": 7.919999999
+          "lending_rate_pct": 7.919999999,
+          "m2_source": "worldbank"
         },
         {
           "year": 1986,
           "m2_local": 634860000000.0,
           "m2_growth_pct": 30.2303636997682,
-          "lending_rate_pct": 7.92
+          "lending_rate_pct": 7.92,
+          "m2_source": "worldbank"
         },
         {
           "year": 1987,
           "m2_local": 795740000000.0,
           "m2_growth_pct": 25.3410200674164,
-          "lending_rate_pct": 7.92
+          "lending_rate_pct": 7.92,
+          "m2_source": "worldbank"
         },
         {
           "year": 1988,
           "m2_local": 960210000000.0,
           "m2_growth_pct": 20.6688114208158,
-          "lending_rate_pct": 9.0
+          "lending_rate_pct": 9.0,
+          "m2_source": "worldbank"
         },
         {
           "year": 1989,
           "m2_local": 1139310000000.0,
           "m2_growth_pct": 18.652169837848,
-          "lending_rate_pct": 11.34
+          "lending_rate_pct": 11.34,
+          "m2_source": "worldbank"
         },
         {
           "year": 1990,
           "m2_local": 1468190000000.0,
           "m2_growth_pct": 28.8665946932793,
-          "lending_rate_pct": 9.36
+          "lending_rate_pct": 9.36,
+          "m2_source": "worldbank"
         },
         {
           "year": 1991,
           "m2_local": 1859890000000.0,
           "m2_growth_pct": 26.679108289799,
-          "lending_rate_pct": 8.64
+          "lending_rate_pct": 8.64,
+          "m2_source": "worldbank"
         },
         {
           "year": 1992,
           "m2_local": 2432730000000.0,
           "m2_growth_pct": 30.7996709482819,
-          "lending_rate_pct": 8.64
+          "lending_rate_pct": 8.64,
+          "m2_source": "worldbank"
         },
         {
           "year": 1993,
           "m2_local": 3568080000000.0,
           "m2_growth_pct": 46.6697907289342,
-          "lending_rate_pct": 10.98
+          "lending_rate_pct": 10.98,
+          "m2_source": "worldbank"
         },
         {
           "year": 1994,
           "m2_local": 4692030000000.0,
           "m2_growth_pct": 31.5001345261317,
-          "lending_rate_pct": 10.98
+          "lending_rate_pct": 10.98,
+          "m2_source": "worldbank"
         },
         {
           "year": 1995,
           "m2_local": 6074350000000.0,
           "m2_growth_pct": 29.4610222014778,
-          "lending_rate_pct": 12.06
+          "lending_rate_pct": 12.06,
+          "m2_source": "worldbank"
         },
         {
           "year": 1996,
           "m2_local": 7609530000000.0,
           "m2_growth_pct": 25.2731567986698,
-          "lending_rate_pct": 10.08
+          "lending_rate_pct": 10.08,
+          "m2_source": "worldbank"
         },
         {
           "year": 1997,
           "m2_local": 9186781000000.0,
           "m2_growth_pct": 20.7273116736513,
-          "lending_rate_pct": 8.64
+          "lending_rate_pct": 8.64,
+          "m2_source": "worldbank"
         },
         {
           "year": 1998,
           "m2_local": 10556011000000.0,
           "m2_growth_pct": 14.9043500655997,
-          "lending_rate_pct": 6.39
+          "lending_rate_pct": 6.39,
+          "m2_source": "worldbank"
         },
         {
           "year": 1999,
           "m2_local": 12104206000000.0,
           "m2_growth_pct": 14.6664777063988,
-          "lending_rate_pct": 5.85
+          "lending_rate_pct": 5.85,
+          "m2_source": "worldbank"
         },
         {
           "year": 2000,
           "m2_local": 13596023000000.0,
           "m2_growth_pct": 12.3247819807429,
-          "lending_rate_pct": 5.85
+          "lending_rate_pct": 5.85,
+          "m2_source": "worldbank"
         },
         {
           "year": 2001,
           "m2_local": 15641193000000.0,
           "m2_growth_pct": 15.042413505773,
-          "lending_rate_pct": 5.85
+          "lending_rate_pct": 5.85,
+          "m2_source": "worldbank"
         },
         {
           "year": 2002,
           "m2_local": 17696514000000.0,
           "m2_growth_pct": 13.1404362825777,
-          "lending_rate_pct": 5.31
+          "lending_rate_pct": 5.31,
+          "m2_source": "worldbank"
         },
         {
           "year": 2003,
           "m2_local": 21101282000000.0,
           "m2_growth_pct": 19.2397666568681,
-          "lending_rate_pct": 5.31
+          "lending_rate_pct": 5.31,
+          "m2_source": "worldbank"
         },
         {
           "year": 2004,
           "m2_local": 24242613000000.0,
           "m2_growth_pct": 14.8869201406815,
-          "lending_rate_pct": 5.58
+          "lending_rate_pct": 5.58,
+          "m2_source": "worldbank"
         },
         {
           "year": 2005,
           "m2_local": 28301227000000.0,
           "m2_growth_pct": 16.741652395309,
-          "lending_rate_pct": 5.58
+          "lending_rate_pct": 5.58,
+          "m2_source": "worldbank"
         },
         {
           "year": 2006,
           "m2_local": 34560360000000.0,
           "m2_growth_pct": 22.1161188523734,
-          "lending_rate_pct": 6.12
+          "lending_rate_pct": 6.12,
+          "m2_source": "worldbank"
         },
         {
           "year": 2007,
           "m2_local": 40344221000000.0,
           "m2_growth_pct": 16.7355345835518,
-          "lending_rate_pct": 7.47
+          "lending_rate_pct": 7.47,
+          "m2_source": "worldbank"
         },
         {
           "year": 2008,
           "m2_local": 47516660000000.0,
           "m2_growth_pct": 17.778107551017,
-          "lending_rate_pct": 5.31
+          "lending_rate_pct": 5.31,
+          "m2_source": "worldbank"
         },
         {
           "year": 2009,
           "m2_local": 61022452307585.9,
           "m2_growth_pct": 28.4232778726154,
-          "lending_rate_pct": 5.31
+          "lending_rate_pct": 5.31,
+          "m2_source": "worldbank"
         },
         {
           "year": 2010,
           "m2_local": 72585178555593.3,
           "m2_growth_pct": 18.9483146133247,
-          "lending_rate_pct": 5.81
+          "lending_rate_pct": 5.81,
+          "m2_source": "worldbank"
         },
         {
           "year": 2011,
           "m2_local": 85159087106100.0,
           "m2_growth_pct": 17.3229697862854,
-          "lending_rate_pct": 6.56
+          "lending_rate_pct": 6.56,
+          "m2_source": "worldbank"
         },
         {
           "year": 2012,
           "m2_local": 97414886583000.0,
           "m2_growth_pct": 14.3916520166902,
-          "lending_rate_pct": 6.0
+          "lending_rate_pct": 6.0,
+          "m2_source": "worldbank"
         },
         {
           "year": 2013,
           "m2_local": 110652500263258.0,
           "m2_growth_pct": 13.5889022146314,
-          "lending_rate_pct": 6.0
+          "lending_rate_pct": 6.0,
+          "m2_source": "worldbank"
         },
         {
           "year": 2014,
           "m2_local": 122837482925283.0,
           "m2_growth_pct": 11.0119361361336,
-          "lending_rate_pct": 5.6
+          "lending_rate_pct": 5.6,
+          "m2_source": "worldbank"
         },
         {
           "year": 2015,
           "m2_local": 139227813190717.0,
           "m2_growth_pct": 13.343101694296,
-          "lending_rate_pct": 4.35
+          "lending_rate_pct": 4.35,
+          "m2_source": "worldbank"
         },
         {
           "year": 2016,
           "m2_local": 155006666873100.0,
           "m2_growth_pct": 11.3331189514331,
-          "lending_rate_pct": 4.35
+          "lending_rate_pct": 4.35,
+          "m2_source": "worldbank"
         },
         {
           "year": 2017,
           "m2_local": 167577363382557.0,
           "m2_growth_pct": 8.10977796183974,
-          "lending_rate_pct": 4.35
+          "lending_rate_pct": 4.35,
+          "m2_source": "worldbank"
         },
         {
           "year": 2018,
           "m2_local": 179292800240995.0,
           "m2_growth_pct": 6.99106169351358,
-          "lending_rate_pct": 4.35
+          "lending_rate_pct": 4.35,
+          "m2_source": "worldbank"
         },
         {
           "year": 2019,
           "m2_local": 195218087092332.0,
           "m2_growth_pct": 8.8822790596896,
-          "lending_rate_pct": 4.35
+          "lending_rate_pct": 4.35,
+          "m2_source": "worldbank"
         },
         {
           "year": 2020,
           "m2_local": 214766371891765.0,
           "m2_growth_pct": 10.0135623141248,
-          "lending_rate_pct": 4.35
+          "lending_rate_pct": 4.35,
+          "m2_source": "worldbank"
         },
         {
           "year": 2021,
           "m2_local": 234258021725870.0,
           "m2_growth_pct": 9.0757457335677,
-          "lending_rate_pct": 4.35
+          "lending_rate_pct": 4.35,
+          "m2_source": "worldbank"
         },
         {
           "year": 2022,
           "m2_local": 261580238098694.0,
           "m2_growth_pct": 11.6633002240566,
-          "lending_rate_pct": 4.35
+          "lending_rate_pct": 4.35,
+          "m2_source": "worldbank"
         },
         {
           "year": 2023,
           "m2_local": 287342842925609.0,
           "m2_growth_pct": 9.84883453512065,
-          "lending_rate_pct": 4.35
+          "lending_rate_pct": 4.35,
+          "m2_source": "worldbank"
         },
         {
           "year": 2024,
           "m2_local": 306912922284009.0,
           "m2_growth_pct": 6.8107070839647,
-          "lending_rate_pct": 4.35
+          "lending_rate_pct": 4.35,
+          "m2_source": "worldbank"
+        },
+        {
+          "year": 2025,
+          "m2_local": 340192040881974.75,
+          "m2_growth_pct": 10.843179345563737,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_m3"
         }
       ]
     },
@@ -577,271 +684,323 @@
           "year": 1980,
           "m2_local": 350418000000000.0,
           "m2_growth_pct": 9.64816761790327,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1981,
           "m2_local": 391677000000000.0,
           "m2_growth_pct": 11.7742239268531,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1982,
           "m2_local": 428079000000000.0,
           "m2_growth_pct": 9.29388245927129,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1983,
           "m2_local": 464412000000000.0,
           "m2_growth_pct": 8.48745208244273,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1984,
           "m2_local": 500947000000000.0,
           "m2_growth_pct": 7.86693711618132,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1985,
           "m2_local": 544753000000000.0,
           "m2_growth_pct": 8.74463765627901,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1986,
           "m2_local": 594777000000000.0,
           "m2_growth_pct": 9.18287737745364,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1987,
           "m2_local": 650850000000000.0,
           "m2_growth_pct": 9.42756697047801,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1988,
           "m2_local": 709958000000000.0,
           "m2_growth_pct": 9.08166244142276,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1989,
           "m2_local": 788005000000000.0,
           "m2_growth_pct": 10.9931855123824,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1990,
           "m2_local": 842001000000000.0,
           "m2_growth_pct": 6.8522407852742,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1991,
           "m2_local": 888721000000000.0,
           "m2_growth_pct": 5.54868699680879,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1992,
           "m2_local": 917964000000000.0,
           "m2_growth_pct": 3.29045898544087,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1993,
           "m2_local": 958532000000000.0,
           "m2_growth_pct": 4.41934542095333,
-          "lending_rate_pct": 4.86355555555556
+          "lending_rate_pct": 4.86355555555556,
+          "m2_source": "worldbank"
         },
         {
           "year": 1994,
           "m2_local": 998667000000000.0,
           "m2_growth_pct": 4.18713198933369,
-          "lending_rate_pct": 4.13341666666667
+          "lending_rate_pct": 4.13341666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1995,
           "m2_local": 1039341000000000.0,
           "m2_growth_pct": 4.07282908116519,
-          "lending_rate_pct": 3.50583333333333
+          "lending_rate_pct": 3.50583333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1996,
           "m2_local": 1078877000000000.0,
           "m2_growth_pct": 3.8039488483568,
-          "lending_rate_pct": 2.65758333333333
+          "lending_rate_pct": 2.65758333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1997,
           "m2_local": 1141560600000000.0,
           "m2_growth_pct": 5.81007844267697,
-          "lending_rate_pct": 2.44883333333333
+          "lending_rate_pct": 2.44883333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1998,
           "m2_local": 1177364400000000.0,
           "m2_growth_pct": 3.13639065679036,
-          "lending_rate_pct": 2.32091666666667
+          "lending_rate_pct": 2.32091666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1999,
           "m2_local": 1210357000000000.0,
           "m2_growth_pct": 2.8022420246442,
-          "lending_rate_pct": 2.16083333333333
+          "lending_rate_pct": 2.16083333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2000,
           "m2_local": 1226522100000000.0,
           "m2_growth_pct": 1.3355646309312,
-          "lending_rate_pct": 2.06716666666667
+          "lending_rate_pct": 2.06716666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2001,
           "m2_local": 1015077200000000.0,
           "m2_growth_pct": -17.2393876963163,
-          "lending_rate_pct": 1.96941666666667
+          "lending_rate_pct": 1.96941666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2002,
           "m2_local": 1024450900000000.0,
           "m2_growth_pct": 0.923447004818944,
-          "lending_rate_pct": 1.86491666666667
+          "lending_rate_pct": 1.86491666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2003,
           "m2_local": 1029988100000000.0,
           "m2_growth_pct": 0.540504186193794,
-          "lending_rate_pct": 1.82208333333333
+          "lending_rate_pct": 1.82208333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2004,
           "m2_local": 1036393400000000.0,
           "m2_growth_pct": 0.621880971246173,
-          "lending_rate_pct": 1.76658333333333
+          "lending_rate_pct": 1.76658333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2005,
           "m2_local": 1038650800000000.0,
           "m2_growth_pct": 0.217813042807876,
-          "lending_rate_pct": 1.67691666666667
+          "lending_rate_pct": 1.67691666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2006,
           "m2_local": 1031241400000000.0,
           "m2_growth_pct": -0.713367765181522,
-          "lending_rate_pct": 1.66483333333333
+          "lending_rate_pct": 1.66483333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2007,
           "m2_local": 1038200900000000.0,
           "m2_growth_pct": 0.674866234035988,
-          "lending_rate_pct": 1.88325
+          "lending_rate_pct": 1.88325,
+          "m2_source": "worldbank"
         },
         {
           "year": 2008,
           "m2_local": 1047101900000000.0,
           "m2_growth_pct": 0.857348515109166,
-          "lending_rate_pct": 1.9095
+          "lending_rate_pct": 1.9095,
+          "m2_source": "worldbank"
         },
         {
           "year": 2009,
           "m2_local": 1069119000000000.0,
           "m2_growth_pct": 2.10267023677447,
-          "lending_rate_pct": 1.72333333333333
+          "lending_rate_pct": 1.72333333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2010,
           "m2_local": 1088405000000000.0,
           "m2_growth_pct": 1.80391518624213,
-          "lending_rate_pct": 1.59833333333333
+          "lending_rate_pct": 1.59833333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2011,
           "m2_local": 1120167500000000.0,
           "m2_growth_pct": 2.91826112522453,
-          "lending_rate_pct": 1.50091666666667
+          "lending_rate_pct": 1.50091666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2012,
           "m2_local": 1144594000000000.0,
           "m2_growth_pct": 2.18061138177996,
-          "lending_rate_pct": 1.4075
+          "lending_rate_pct": 1.4075,
+          "m2_source": "worldbank"
         },
         {
           "year": 2013,
           "m2_local": 1185264300000000.0,
           "m2_growth_pct": 3.55325119649413,
-          "lending_rate_pct": 1.30375
+          "lending_rate_pct": 1.30375,
+          "m2_source": "worldbank"
         },
         {
           "year": 2014,
           "m2_local": 1219185600000000.0,
           "m2_growth_pct": 2.86191864548692,
-          "lending_rate_pct": 1.21916666666667
+          "lending_rate_pct": 1.21916666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2015,
           "m2_local": 1255722800000000.0,
           "m2_growth_pct": 2.99685298120319,
-          "lending_rate_pct": 1.14283333333333
+          "lending_rate_pct": 1.14283333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2016,
           "m2_local": 1304082100000000.0,
           "m2_growth_pct": 3.85111268187533,
-          "lending_rate_pct": 1.04475
+          "lending_rate_pct": 1.04475,
+          "m2_source": "worldbank"
         },
         {
           "year": 2017,
           "m2_local": 1349544600000000.0,
           "m2_growth_pct": 3.48616854721033,
-          "lending_rate_pct": 0.994
+          "lending_rate_pct": 0.994,
+          "m2_source": "worldbank"
         },
         {
           "year": 2018,
           "m2_local": 1381011400000000.0,
           "m2_growth_pct": 2.33166062092353,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2019,
           "m2_local": 1409735600000000.0,
           "m2_growth_pct": 2.07993938355614,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2020,
           "m2_local": 1513379000000000.0,
           "m2_growth_pct": 7.35197437022943,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2021,
           "m2_local": 1557950400000000.0,
           "m2_growth_pct": 2.94515782233003,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2022,
           "m2_local": 1593300200000000.0,
           "m2_growth_pct": 2.26899392946014,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2023,
           "m2_local": 1627698600000000.0,
           "m2_growth_pct": 2.15894029260776,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2024,
           "m2_local": 1629897300000000.0,
           "m2_growth_pct": 0.135080290663149,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
+        },
+        {
+          "year": 2025,
+          "m2_local": 1666728255312476.2,
+          "m2_growth_pct": 2.2597101861863367,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_m3"
         }
       ]
     },
@@ -850,7 +1009,330 @@
       "wb": "DE",
       "currency": "EUR",
       "gdpRank": 4,
-      "annual": []
+      "annual": [
+        {
+          "year": 1980,
+          "m2_local": 413529488903.87976,
+          "m2_growth_pct": null,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1981,
+          "m2_local": 442738296550.9461,
+          "m2_growth_pct": 7.063294983989787,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1982,
+          "m2_local": 495490695906.88025,
+          "m2_growth_pct": 11.915029661289744,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1983,
+          "m2_local": 548152487211.10394,
+          "m2_growth_pct": 10.628209921851006,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1984,
+          "m2_local": 582615483058.8121,
+          "m2_growth_pct": 6.287118393469204,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1985,
+          "m2_local": 618751232875.4913,
+          "m2_growth_pct": 6.20233256194318,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1986,
+          "m2_local": 672594967252.726,
+          "m2_growth_pct": 8.702000338166505,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1987,
+          "m2_local": 729112995058.5284,
+          "m2_growth_pct": 8.402981074428117,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1988,
+          "m2_local": 776138055053.0891,
+          "m2_growth_pct": 6.449625821137062,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1989,
+          "m2_local": 834497705091.7996,
+          "m2_growth_pct": 7.519235741471086,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1990,
+          "m2_local": 941392407862.867,
+          "m2_growth_pct": 12.80946635548965,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1991,
+          "m2_local": 1031361441547.6721,
+          "m2_growth_pct": 9.557017130513223,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1992,
+          "m2_local": 1147938012127.513,
+          "m2_growth_pct": 11.303173250776632,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1993,
+          "m2_local": 1298097498891.4631,
+          "m2_growth_pct": 13.080800982071716,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1994,
+          "m2_local": 1339535928137.879,
+          "m2_growth_pct": 3.1922432083724805,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1995,
+          "m2_local": 1433874122839.5784,
+          "m2_growth_pct": 7.04260279400204,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1996,
+          "m2_local": 1426496791744.4756,
+          "m2_growth_pct": -0.5145033987009273,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1997,
+          "m2_local": 1443748228942.2288,
+          "m2_growth_pct": 1.209356887277413,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1998,
+          "m2_local": 1490210158774.9133,
+          "m2_growth_pct": 3.2181462737949307,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1999,
+          "m2_local": 1554317416310.1318,
+          "m2_growth_pct": 4.301893740136653,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2000,
+          "m2_local": 1574376227127.5615,
+          "m2_growth_pct": 1.290522167926822,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2001,
+          "m2_local": 1722744096831.897,
+          "m2_growth_pct": 9.423914509623387,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2002,
+          "m2_local": 1800539515944.9407,
+          "m2_growth_pct": 4.515784976776782,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2003,
+          "m2_local": 1878702332752.8374,
+          "m2_growth_pct": 4.341077555683426,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2004,
+          "m2_local": 1960862769168.5486,
+          "m2_growth_pct": 4.3732546121515,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2005,
+          "m2_local": 2078199842324.493,
+          "m2_growth_pct": 5.983951299442447,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2006,
+          "m2_local": 2250154721285.2554,
+          "m2_growth_pct": 8.274222500586315,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2007,
+          "m2_local": 2492358052461.0303,
+          "m2_growth_pct": 10.763852320227652,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2008,
+          "m2_local": 2693495725133.641,
+          "m2_growth_pct": 8.070175650484934,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2009,
+          "m2_local": 2673209078840.1025,
+          "m2_growth_pct": -0.7531716536335664,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2010,
+          "m2_local": 2711853163656.7803,
+          "m2_growth_pct": 1.4456065229826898,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2011,
+          "m2_local": 2828420192119.847,
+          "m2_growth_pct": 4.298426995430793,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2012,
+          "m2_local": 2960149083532.2974,
+          "m2_growth_pct": 4.657331035164258,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2013,
+          "m2_local": 3013723463482.8384,
+          "m2_growth_pct": 1.8098541133817259,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2014,
+          "m2_local": 3218105649080.8223,
+          "m2_growth_pct": 6.781716639714097,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2015,
+          "m2_local": 3375916781370.1187,
+          "m2_growth_pct": 4.9038518152557,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2016,
+          "m2_local": 3571144415424.623,
+          "m2_growth_pct": 5.782951615746623,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2017,
+          "m2_local": 3739251813877.66,
+          "m2_growth_pct": 4.707381693300916,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2018,
+          "m2_local": 3888381788345.5957,
+          "m2_growth_pct": 3.988230316943686,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2019,
+          "m2_local": 4067913084955.0024,
+          "m2_growth_pct": 4.617121115717193,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2020,
+          "m2_local": 4625033168111.314,
+          "m2_growth_pct": 13.695476563075948,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2021,
+          "m2_local": 4863981950534.326,
+          "m2_growth_pct": 5.166423109579332,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2022,
+          "m2_local": 5007730653254.535,
+          "m2_growth_pct": 2.9553708089812725,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2023,
+          "m2_local": 4984795472679.339,
+          "m2_growth_pct": -0.4579954906378747,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2024,
+          "m2_local": 5127754515518.256,
+          "m2_growth_pct": 2.867901875261425,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2025,
+          "m2_local": 5127754515518.256,
+          "m2_growth_pct": 0.0,
+          "lending_rate_pct": null,
+          "m2_source": "interpolated"
+        }
+      ]
     },
     "IN": {
       "name": "India",
@@ -862,253 +1344,323 @@
           "year": 1980,
           "m2_local": 506875000000.0,
           "m2_growth_pct": 15.897673929397,
-          "lending_rate_pct": 16.5
+          "lending_rate_pct": 16.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 1981,
           "m2_local": 595329000000.0,
           "m2_growth_pct": 17.4508508014797,
-          "lending_rate_pct": 16.5
+          "lending_rate_pct": 16.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 1982,
           "m2_local": 697749000000.0,
           "m2_growth_pct": 17.203932615411,
-          "lending_rate_pct": 16.5
+          "lending_rate_pct": 16.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 1983,
           "m2_local": 815579000000.0,
           "m2_growth_pct": 16.8871614291099,
-          "lending_rate_pct": 16.5
+          "lending_rate_pct": 16.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 1984,
           "m2_local": 962256000000.0,
           "m2_growth_pct": 17.9844012658492,
-          "lending_rate_pct": 16.5
+          "lending_rate_pct": 16.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 1985,
           "m2_local": 1124716000000.0,
           "m2_growth_pct": 16.8832410501987,
-          "lending_rate_pct": 16.5
+          "lending_rate_pct": 16.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 1986,
           "m2_local": 1326349000000.0,
           "m2_growth_pct": 17.9274590207661,
-          "lending_rate_pct": 16.5
+          "lending_rate_pct": 16.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 1987,
           "m2_local": 1542780000000.0,
           "m2_growth_pct": 16.3178017248854,
-          "lending_rate_pct": 16.5
+          "lending_rate_pct": 16.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 1988,
           "m2_local": 1824964000000.0,
           "m2_growth_pct": 18.2906182346154,
-          "lending_rate_pct": 16.5
+          "lending_rate_pct": 16.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 1989,
           "m2_local": 2112034000000.0,
           "m2_growth_pct": 15.7301733075283,
-          "lending_rate_pct": 16.5
+          "lending_rate_pct": 16.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 1990,
           "m2_local": 2430246000000.0,
           "m2_growth_pct": 15.0666135109567,
-          "lending_rate_pct": 16.5
+          "lending_rate_pct": 16.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 1991,
           "m2_local": 2875393000000.0,
           "m2_growth_pct": 18.3169522756133,
-          "lending_rate_pct": 17.875
+          "lending_rate_pct": 17.875,
+          "m2_source": "worldbank"
         },
         {
           "year": 1992,
           "m2_local": 3360256000000.0,
           "m2_growth_pct": 16.8624949702528,
-          "lending_rate_pct": 18.9166666666667
+          "lending_rate_pct": 18.9166666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1993,
           "m2_local": 3931757000000.0,
           "m2_growth_pct": 17.0076625114277,
-          "lending_rate_pct": 16.25
+          "lending_rate_pct": 16.25,
+          "m2_source": "worldbank"
         },
         {
           "year": 1994,
           "m2_local": 4729028000000.0,
           "m2_growth_pct": 20.2777282522801,
-          "lending_rate_pct": 14.75
+          "lending_rate_pct": 14.75,
+          "m2_source": "worldbank"
         },
         {
           "year": 1995,
           "m2_local": 5249747000000.0,
           "m2_growth_pct": 11.0111211014187,
-          "lending_rate_pct": 15.4583333333333
+          "lending_rate_pct": 15.4583333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1996,
           "m2_local": 6233354000000.0,
           "m2_growth_pct": 18.7362743385538,
-          "lending_rate_pct": 15.9583333333333
+          "lending_rate_pct": 15.9583333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1997,
           "m2_local": 7333962000000.0,
           "m2_growth_pct": 17.6567542931141,
-          "lending_rate_pct": 13.8333333333333
+          "lending_rate_pct": 13.8333333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1998,
           "m2_local": 8666764000000.0,
           "m2_growth_pct": 18.1730148042763,
-          "lending_rate_pct": 13.5416666666667
+          "lending_rate_pct": 13.5416666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1999,
           "m2_local": 10153043000000.0,
           "m2_growth_pct": 17.1491804784346,
-          "lending_rate_pct": 12.5416666666667
+          "lending_rate_pct": 12.5416666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2000,
           "m2_local": 11693433000000.0,
           "m2_growth_pct": 15.1717076348441,
-          "lending_rate_pct": 12.2916666666667
+          "lending_rate_pct": 12.2916666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2001,
           "m2_local": 13367997000000.0,
           "m2_growth_pct": 14.3205506885788,
-          "lending_rate_pct": 12.0833333333333
+          "lending_rate_pct": 12.0833333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2002,
           "m2_local": 15608629000000.0,
           "m2_growth_pct": 16.7611647429304,
-          "lending_rate_pct": 11.9166666666667
+          "lending_rate_pct": 11.9166666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2003,
           "m2_local": 17642997000000.0,
           "m2_growth_pct": 13.0336110878156,
-          "lending_rate_pct": 11.4583333333333
+          "lending_rate_pct": 11.4583333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2004,
           "m2_local": 20595082000000.0,
           "m2_growth_pct": 16.7323329477412,
-          "lending_rate_pct": 10.9166666666667
+          "lending_rate_pct": 10.9166666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2005,
           "m2_local": 23807895000000.0,
           "m2_growth_pct": 15.5999038993872,
-          "lending_rate_pct": 10.75
+          "lending_rate_pct": 10.75,
+          "m2_source": "worldbank"
         },
         {
           "year": 2006,
           "m2_local": 28958290522000.0,
           "m2_growth_pct": 21.6331411155837,
-          "lending_rate_pct": 11.1875
+          "lending_rate_pct": 11.1875,
+          "m2_source": "worldbank"
         },
         {
           "year": 2007,
           "m2_local": 35407737027973.3,
           "m2_growth_pct": 22.2715028743619,
-          "lending_rate_pct": 13.0208333333333
+          "lending_rate_pct": 13.0208333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2008,
           "m2_local": 42664627044509.5,
           "m2_growth_pct": 20.4952098768781,
-          "lending_rate_pct": 13.3125
+          "lending_rate_pct": 13.3125,
+          "m2_source": "worldbank"
         },
         {
           "year": 2009,
           "m2_local": 50342484730000.0,
           "m2_growth_pct": 17.9958392170653,
-          "lending_rate_pct": 12.1875
+          "lending_rate_pct": 12.1875,
+          "m2_source": "worldbank"
         },
         {
           "year": 2010,
           "m2_local": 59304543000000.0,
           "m2_growth_pct": 17.8021770638972,
-          "lending_rate_pct": 8.33335
+          "lending_rate_pct": 8.33335,
+          "m2_source": "worldbank"
         },
         {
           "year": 2011,
           "m2_local": 68874866612000.0,
           "m2_growth_pct": 16.1375893445465,
-          "lending_rate_pct": 10.1666666666667
+          "lending_rate_pct": 10.1666666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2012,
           "m2_local": 76482575453055.6,
           "m2_growth_pct": 11.0456966601662,
-          "lending_rate_pct": 10.6041666666667
+          "lending_rate_pct": 10.6041666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2013,
           "m2_local": 87826111579704.3,
           "m2_growth_pct": 14.8315300046496,
-          "lending_rate_pct": 10.2916666666667
+          "lending_rate_pct": 10.2916666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2014,
           "m2_local": 97124597158162.5,
           "m2_growth_pct": 10.5873816012219,
-          "lending_rate_pct": 10.25
+          "lending_rate_pct": 10.25,
+          "m2_source": "worldbank"
         },
         {
           "year": 2015,
           "m2_local": 107437019361400.0,
           "m2_growth_pct": 10.6177245568846,
-          "lending_rate_pct": 10.0083333333333
+          "lending_rate_pct": 10.0083333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2016,
           "m2_local": 114743761759911.0,
           "m2_growth_pct": 6.80095412358039,
-          "lending_rate_pct": 9.6725
+          "lending_rate_pct": 9.6725,
+          "m2_source": "worldbank"
         },
         {
           "year": 2017,
           "m2_local": 126712733703626.0,
           "m2_growth_pct": 10.4310437100352,
-          "lending_rate_pct": 9.50833333333333
+          "lending_rate_pct": 9.50833333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2018,
           "m2_local": 140042431749442.0,
           "m2_growth_pct": 10.5196199752058,
-          "lending_rate_pct": 9.45416666666667
+          "lending_rate_pct": 9.45416666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2019,
           "m2_local": 154761239231776.0,
           "m2_growth_pct": 10.5102484286107,
-          "lending_rate_pct": 9.46625
+          "lending_rate_pct": 9.46625,
+          "m2_source": "worldbank"
         },
         {
           "year": 2020,
           "m2_local": 174074107697939.0,
           "m2_growth_pct": 12.4791379043168,
-          "lending_rate_pct": 9.15
+          "lending_rate_pct": 9.15,
+          "m2_source": "worldbank"
         },
         {
           "year": 2021,
           "m2_local": 193739443589635.0,
           "m2_growth_pct": 11.2971056705459,
-          "lending_rate_pct": 8.69833333333333
+          "lending_rate_pct": 8.69833333333333,
+          "m2_source": "worldbank"
+        },
+        {
+          "year": 2022,
+          "m2_local": 208792742672724.47,
+          "m2_growth_pct": 7.769868026964244,
+          "lending_rate_pct": 8.56714285714286,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2023,
+          "m2_local": 232846843410080.66,
+          "m2_growth_pct": 11.520563612242096,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2024,
+          "m2_local": 253881620941487.4,
+          "m2_growth_pct": 9.033739613279245,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2025,
+          "m2_local": 284656748507803.56,
+          "m2_growth_pct": 12.12184145200843,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_m3"
         }
       ]
     },
@@ -1122,271 +1674,323 @@
           "year": 1980,
           "m2_local": 74787000000.0,
           "m2_growth_pct": 18.4669486289978,
-          "lending_rate_pct": 16.3126833333333
+          "lending_rate_pct": 16.3126833333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1981,
           "m2_local": 93615000000.0,
           "m2_growth_pct": 25.1754984155,
-          "lending_rate_pct": 13.255
+          "lending_rate_pct": 13.255,
+          "m2_source": "worldbank"
         },
         {
           "year": 1982,
           "m2_local": 106398000000.0,
           "m2_growth_pct": 13.6548630027239,
-          "lending_rate_pct": 11.9309666666667
+          "lending_rate_pct": 11.9309666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1983,
           "m2_local": 117315000000.0,
           "m2_growth_pct": 10.2605312129927,
-          "lending_rate_pct": 9.82526666666667
+          "lending_rate_pct": 9.82526666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1984,
           "m2_local": 130814000000.0,
           "m2_growth_pct": 11.5066274559945,
-          "lending_rate_pct": 9.6801
+          "lending_rate_pct": 9.6801,
+          "m2_source": "worldbank"
         },
         {
           "year": 1985,
           "m2_local": 145524000000.0,
           "m2_growth_pct": 11.2449737795649,
-          "lending_rate_pct": 12.2529833333333
+          "lending_rate_pct": 12.2529833333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1986,
           "m2_local": 178359000000.0,
           "m2_growth_pct": 22.5632885297271,
-          "lending_rate_pct": 10.9013583333333
+          "lending_rate_pct": 10.9013583333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1987,
           "m2_local": 337689000000.0,
           "m2_growth_pct": 89.3310682387769,
-          "lending_rate_pct": 9.7355
+          "lending_rate_pct": 9.7355,
+          "m2_source": "worldbank"
         },
         {
           "year": 1988,
           "m2_local": 393988000000.0,
           "m2_growth_pct": 16.6718489497733,
-          "lending_rate_pct": 10.0957083333333
+          "lending_rate_pct": 10.0957083333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1989,
           "m2_local": 473282000000.0,
           "m2_growth_pct": 20.1259936850869,
-          "lending_rate_pct": 13.8418083333333
+          "lending_rate_pct": 13.8418083333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1990,
           "m2_local": 523077000000.0,
           "m2_growth_pct": 10.5212114553268,
-          "lending_rate_pct": 14.7681166666667
+          "lending_rate_pct": 14.7681166666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1991,
           "m2_local": 531768000000.0,
           "m2_growth_pct": 1.66151446154199,
-          "lending_rate_pct": 11.6949833333333
+          "lending_rate_pct": 11.6949833333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1992,
           "m2_local": 379524000000.0,
           "m2_growth_pct": -28.6297783996028,
-          "lending_rate_pct": 9.56348333333333
+          "lending_rate_pct": 9.56348333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1993,
           "m2_local": 397343000000.0,
           "m2_growth_pct": 4.69509174650351,
-          "lending_rate_pct": 6.01363333333333
+          "lending_rate_pct": 6.01363333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1994,
           "m2_local": 427759000000.0,
           "m2_growth_pct": 7.65484732334532,
-          "lending_rate_pct": 5.46278333333333
+          "lending_rate_pct": 5.46278333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1995,
           "m2_local": 514557000000.0,
           "m2_growth_pct": 20.291332268871,
-          "lending_rate_pct": 6.693675
+          "lending_rate_pct": 6.693675,
+          "m2_source": "worldbank"
         },
         {
           "year": 1996,
           "m2_local": 589201000000.0,
           "m2_growth_pct": 14.5064589540129,
-          "lending_rate_pct": 5.95853333333333
+          "lending_rate_pct": 5.95853333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1997,
           "m2_local": 739478000000.0,
           "m2_growth_pct": 25.5052180834724,
-          "lending_rate_pct": 6.5634
+          "lending_rate_pct": 6.5634,
+          "m2_source": "worldbank"
         },
         {
           "year": 1998,
           "m2_local": 893624000000.0,
           "m2_growth_pct": 20.8452448889622,
-          "lending_rate_pct": 7.23205
+          "lending_rate_pct": 7.23205,
+          "m2_source": "worldbank"
         },
         {
           "year": 1999,
           "m2_local": 932914000000.0,
           "m2_growth_pct": 4.3967037590754,
-          "lending_rate_pct": 5.34440833333333
+          "lending_rate_pct": 5.34440833333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2000,
           "m2_local": 1036128000000.0,
           "m2_growth_pct": 11.063613580673,
-          "lending_rate_pct": 5.96389166666667
+          "lending_rate_pct": 5.96389166666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2001,
           "m2_local": 1127563000000.0,
           "m2_growth_pct": 8.8246818925847,
-          "lending_rate_pct": 5.122375
+          "lending_rate_pct": 5.122375,
+          "m2_source": "worldbank"
         },
         {
           "year": 2002,
           "m2_local": 1183874000000.0,
           "m2_growth_pct": 4.99404467865654,
-          "lending_rate_pct": 4.0
+          "lending_rate_pct": 4.0,
+          "m2_source": "worldbank"
         },
         {
           "year": 2003,
           "m2_local": 1299867000000.0,
           "m2_growth_pct": 9.79774874691057,
-          "lending_rate_pct": 3.69579166666667
+          "lending_rate_pct": 3.69579166666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2004,
           "m2_local": 1427535000000.0,
           "m2_growth_pct": 9.82162021191399,
-          "lending_rate_pct": 4.37981666666667
+          "lending_rate_pct": 4.37981666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2005,
           "m2_local": 1625242000000.0,
           "m2_growth_pct": 13.8495378397027,
-          "lending_rate_pct": 4.648675
+          "lending_rate_pct": 4.648675,
+          "m2_source": "worldbank"
         },
         {
           "year": 2006,
           "m2_local": 1854360000000.0,
           "m2_growth_pct": 14.0974697921909,
-          "lending_rate_pct": 4.63825833333333
+          "lending_rate_pct": 4.63825833333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2007,
           "m2_local": 2147563000000.0,
           "m2_growth_pct": 15.8115468409586,
-          "lending_rate_pct": 5.50870833333333
+          "lending_rate_pct": 5.50870833333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2008,
           "m2_local": 2529903000000.0,
           "m2_growth_pct": 17.8034358014177,
-          "lending_rate_pct": 4.67530833333333
+          "lending_rate_pct": 4.67530833333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2009,
           "m2_local": 2528255145586.11,
           "m2_growth_pct": -0.0651350828031608,
-          "lending_rate_pct": 0.644866666666667
+          "lending_rate_pct": 0.644866666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2010,
           "m2_local": 2629133432125.4,
           "m2_growth_pct": 3.990035844104,
-          "lending_rate_pct": 0.5
+          "lending_rate_pct": 0.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 2011,
           "m2_local": 2512977013326.73,
           "m2_growth_pct": -4.41804958924313,
-          "lending_rate_pct": 0.5
+          "lending_rate_pct": 0.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 2012,
           "m2_local": 2532325435572.07,
           "m2_growth_pct": 0.769940279705404,
-          "lending_rate_pct": 0.5
+          "lending_rate_pct": 0.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 2013,
           "m2_local": 2585562660261.4,
           "m2_growth_pct": 2.10230580720376,
-          "lending_rate_pct": 0.5
+          "lending_rate_pct": 0.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 2014,
           "m2_local": 2520034114562.07,
           "m2_growth_pct": -2.53440176509608,
-          "lending_rate_pct": 0.5
+          "lending_rate_pct": 0.5,
+          "m2_source": "worldbank"
         },
         {
           "year": 2015,
           "m2_local": 2569785000000.0,
           "m2_growth_pct": 1.97421475965121,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2016,
           "m2_local": 2793789000000.0,
           "m2_growth_pct": 8.71683817906946,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2017,
           "m2_local": 3025571000000.0,
           "m2_growth_pct": 8.29633161273095,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2018,
           "m2_local": 3185921000000.0,
           "m2_growth_pct": 5.29982604936391,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2019,
           "m2_local": 3142460000000.0,
           "m2_growth_pct": -1.36415811942606,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2020,
           "m2_local": 3447481000000.0,
           "m2_growth_pct": 9.7064401774406,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2021,
           "m2_local": 3783015000000.0,
           "m2_growth_pct": 9.73272949147508,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2022,
           "m2_local": 4108638000000.0,
           "m2_growth_pct": 8.60749957375268,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2023,
           "m2_local": 4000561000000.0,
           "m2_growth_pct": -2.63048241290666,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 2024,
           "m2_local": 4103125000000.0,
           "m2_growth_pct": 2.56374043540393,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
+        },
+        {
+          "year": 2025,
+          "m2_local": 4129248262690.1846,
+          "m2_growth_pct": 0.6366674836907116,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_m3"
         }
       ]
     },
@@ -1395,14 +1999,660 @@
       "wb": "FR",
       "currency": "EUR",
       "gdpRank": 7,
-      "annual": []
+      "annual": [
+        {
+          "year": 1980,
+          "m2_local": 301128726647.8292,
+          "m2_growth_pct": null,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1981,
+          "m2_local": 335708024137.66,
+          "m2_growth_pct": 11.483227746076619,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1982,
+          "m2_local": 367540594612.54016,
+          "m2_growth_pct": 9.482219126769209,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1983,
+          "m2_local": 392140309581.61,
+          "m2_growth_pct": 6.6930606658572644,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1984,
+          "m2_local": 420316151869.1626,
+          "m2_growth_pct": 7.185143072288214,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1985,
+          "m2_local": 460534594830.0957,
+          "m2_growth_pct": 9.568617047448713,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1986,
+          "m2_local": 489956039923.31683,
+          "m2_growth_pct": 6.388541799791514,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1987,
+          "m2_local": 518363512566.6291,
+          "m2_growth_pct": 5.797963557660868,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1988,
+          "m2_local": 557849982659.9049,
+          "m2_growth_pct": 7.617524987004232,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1989,
+          "m2_local": 604282699860.7218,
+          "m2_growth_pct": 8.323513246235015,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1990,
+          "m2_local": 665823194960.5858,
+          "m2_growth_pct": 10.184057083555121,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1991,
+          "m2_local": 692211186427.495,
+          "m2_growth_pct": 3.9632130070913485,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1992,
+          "m2_local": 744962998754.3453,
+          "m2_growth_pct": 7.620768540176681,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1993,
+          "m2_local": 820700017526.9584,
+          "m2_growth_pct": 10.166547721061736,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1994,
+          "m2_local": 837978583511.0809,
+          "m2_growth_pct": 2.105344902536821,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1995,
+          "m2_local": 882104476553.7155,
+          "m2_growth_pct": 5.265754269965894,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1996,
+          "m2_local": 909930452717.5613,
+          "m2_growth_pct": 3.154498917470505,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1997,
+          "m2_local": 943107107415.4235,
+          "m2_growth_pct": 3.6460648831763143,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1998,
+          "m2_local": 992412328469.2427,
+          "m2_growth_pct": 5.227955623082914,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1999,
+          "m2_local": 1043934660766.3246,
+          "m2_growth_pct": 5.191625579314718,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2000,
+          "m2_local": 1089315011495.3505,
+          "m2_growth_pct": 4.3470489518676825,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2001,
+          "m2_local": 1200585102781.2302,
+          "m2_growth_pct": 10.21468446791478,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2002,
+          "m2_local": 1278176388176.9805,
+          "m2_growth_pct": 6.462789286324244,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2003,
+          "m2_local": 1360152285028.5325,
+          "m2_growth_pct": 6.413504240089396,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2004,
+          "m2_local": 1450404023231.212,
+          "m2_growth_pct": 6.635414225017189,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2005,
+          "m2_local": 1574524447290.6038,
+          "m2_growth_pct": 8.557644771480732,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2006,
+          "m2_local": 1712087486794.3796,
+          "m2_growth_pct": 8.736799212009094,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2007,
+          "m2_local": 1899867675094.365,
+          "m2_growth_pct": 10.967908459606512,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2008,
+          "m2_local": 2070095039921.2253,
+          "m2_growth_pct": 8.959959004429363,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2009,
+          "m2_local": 2074967059677.3967,
+          "m2_growth_pct": 0.23535246750587824,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2010,
+          "m2_local": 2069799016094.588,
+          "m2_growth_pct": -0.24906629523132606,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2011,
+          "m2_local": 2123332171336.6284,
+          "m2_growth_pct": 2.5863938878012416,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2012,
+          "m2_local": 2208296405203.371,
+          "m2_growth_pct": 4.001457473950398,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2013,
+          "m2_local": 2229268744896.3228,
+          "m2_growth_pct": 0.9497067351798893,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2014,
+          "m2_local": 2322335508724.279,
+          "m2_growth_pct": 4.174766458329571,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2015,
+          "m2_local": 2407410554473.0815,
+          "m2_growth_pct": 3.66334000531805,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2016,
+          "m2_local": 2494405272992.2144,
+          "m2_growth_pct": 3.6136220453753642,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2017,
+          "m2_local": 2570923391803.1685,
+          "m2_growth_pct": 3.067589683177885,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2018,
+          "m2_local": 2666997614018.132,
+          "m2_growth_pct": 3.736953910072738,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2019,
+          "m2_local": 2797066069702.294,
+          "m2_growth_pct": 4.876961831555571,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2020,
+          "m2_local": 3107207863241.0264,
+          "m2_growth_pct": 11.088111106783494,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2021,
+          "m2_local": 3312938054957.8887,
+          "m2_growth_pct": 6.621063049907194,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2022,
+          "m2_local": 3331462487270.411,
+          "m2_growth_pct": 0.5591542010512374,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2023,
+          "m2_local": 3339344886377.218,
+          "m2_growth_pct": 0.23660476853410994,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2024,
+          "m2_local": 3458681833573.8765,
+          "m2_growth_pct": 3.5736634357083297,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2025,
+          "m2_local": 3458681833573.8765,
+          "m2_growth_pct": 0.0,
+          "lending_rate_pct": null,
+          "m2_source": "interpolated"
+        }
+      ]
     },
     "IT": {
       "name": "Italy",
       "wb": "IT",
       "currency": "EUR",
       "gdpRank": 8,
-      "annual": []
+      "annual": [
+        {
+          "year": 1980,
+          "m2_local": 207402315297.2084,
+          "m2_growth_pct": null,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1981,
+          "m2_local": 237897689985.44223,
+          "m2_growth_pct": 14.703488070773862,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1982,
+          "m2_local": 272250036020.08032,
+          "m2_growth_pct": 14.439966204270505,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1983,
+          "m2_local": 314689094699.65283,
+          "m2_growth_pct": 15.588265588491002,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1984,
+          "m2_local": 351359542228.3299,
+          "m2_growth_pct": 11.652913350453487,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1985,
+          "m2_local": 381457962845.40967,
+          "m2_growth_pct": 8.56627385902058,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1986,
+          "m2_local": 411119316055.90265,
+          "m2_growth_pct": 7.775785564742188,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1987,
+          "m2_local": 451911331801.8203,
+          "m2_growth_pct": 9.922184181774352,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1988,
+          "m2_local": 493190312474.7419,
+          "m2_growth_pct": 9.134309712557487,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1989,
+          "m2_local": 553205472455.0591,
+          "m2_growth_pct": 12.168762942477862,
+          "lending_rate_pct": 15.0025833333333,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1990,
+          "m2_local": 626802751823.7565,
+          "m2_growth_pct": 13.303787296622627,
+          "lending_rate_pct": 14.85225,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1991,
+          "m2_local": 686784773608.4796,
+          "m2_growth_pct": 9.569521130881832,
+          "lending_rate_pct": 14.6664166666667,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1992,
+          "m2_local": 709336169232.6649,
+          "m2_growth_pct": 3.2836190449733627,
+          "lending_rate_pct": 16.5239166666667,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1993,
+          "m2_local": 666491642152.8788,
+          "m2_growth_pct": -6.040087752205537,
+          "lending_rate_pct": 14.6278333333333,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1994,
+          "m2_local": 666205702717.0323,
+          "m2_growth_pct": -0.042902178776438316,
+          "lending_rate_pct": 11.9838333333333,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1995,
+          "m2_local": 651047046384.3757,
+          "m2_growth_pct": -2.2753717464191636,
+          "lending_rate_pct": 13.236,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1996,
+          "m2_local": 748241448898.4054,
+          "m2_growth_pct": 14.928936864671138,
+          "lending_rate_pct": 12.8183333333333,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1997,
+          "m2_local": 810103144782.4192,
+          "m2_growth_pct": 8.26761147422257,
+          "lending_rate_pct": 10.5094833333333,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1998,
+          "m2_local": 843788727596.0789,
+          "m2_growth_pct": 4.158184427577694,
+          "lending_rate_pct": 8.64310833333333,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 1999,
+          "m2_local": 881114366794.7708,
+          "m2_growth_pct": 4.42357642120097,
+          "lending_rate_pct": 6.345525,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2000,
+          "m2_local": 920191804013.2816,
+          "m2_growth_pct": 4.4350017081962845,
+          "lending_rate_pct": 7.02274166666667,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2001,
+          "m2_local": 1026823919738.226,
+          "m2_growth_pct": 11.588031458211656,
+          "lending_rate_pct": 7.28775,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2002,
+          "m2_local": 1097740116712.7975,
+          "m2_growth_pct": 6.906363945305305,
+          "lending_rate_pct": 6.53650833333333,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2003,
+          "m2_local": 1173249736756.649,
+          "m2_growth_pct": 6.878642667261392,
+          "lending_rate_pct": 5.83035,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2004,
+          "m2_local": 1246238841885.4233,
+          "m2_growth_pct": 6.2211056045532676,
+          "lending_rate_pct": 5.50616666666667,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2005,
+          "m2_local": 1339536520053.1836,
+          "m2_growth_pct": 7.486340100474731,
+          "lending_rate_pct": 5.313935,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2006,
+          "m2_local": 1446692246327.0837,
+          "m2_growth_pct": 7.999462849258165,
+          "lending_rate_pct": 5.62177916666667,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2007,
+          "m2_local": 1589906928931.3315,
+          "m2_growth_pct": 9.899457397925971,
+          "lending_rate_pct": 6.3347,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2008,
+          "m2_local": 1709876707471.499,
+          "m2_growth_pct": 7.545710780744019,
+          "lending_rate_pct": 6.83731,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2009,
+          "m2_local": 1697954939158.1833,
+          "m2_growth_pct": -0.69722970441215,
+          "lending_rate_pct": 4.75666666666667,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2010,
+          "m2_local": 1677702581508.8042,
+          "m2_growth_pct": -1.1927500066297392,
+          "lending_rate_pct": 4.03166666666667,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2011,
+          "m2_local": 1706541791371.456,
+          "m2_growth_pct": 1.718970345549331,
+          "lending_rate_pct": 4.59916666666667,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2012,
+          "m2_local": 1726737946284.853,
+          "m2_growth_pct": 1.1834550443189817,
+          "lending_rate_pct": 5.2225,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2013,
+          "m2_local": 1704540555668.4917,
+          "m2_growth_pct": -1.2855100951548515,
+          "lending_rate_pct": 5.14416666666667,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2014,
+          "m2_local": 1763932872783.3787,
+          "m2_growth_pct": 3.484359284815852,
+          "lending_rate_pct": 4.86666666666667,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2015,
+          "m2_local": 1818928581681.6472,
+          "m2_growth_pct": 3.117789216745459,
+          "lending_rate_pct": 4.12925,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2016,
+          "m2_local": 1905442673033.7737,
+          "m2_growth_pct": 4.756321508354211,
+          "lending_rate_pct": 3.49616666666667,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2017,
+          "m2_local": 1957060707431.4622,
+          "m2_growth_pct": 2.708978607868806,
+          "lending_rate_pct": 3.00083333333333,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2018,
+          "m2_local": 2012955317598.676,
+          "m2_growth_pct": 2.8560488673124773,
+          "lending_rate_pct": 2.68,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2019,
+          "m2_local": 2074697773954.2563,
+          "m2_growth_pct": 3.0672541916745066,
+          "lending_rate_pct": 2.6025,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2020,
+          "m2_local": 2238332993879.715,
+          "m2_growth_pct": 7.887183472201786,
+          "lending_rate_pct": 2.32833333333333,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2021,
+          "m2_local": 2433757539316.2886,
+          "m2_growth_pct": 8.730807523765405,
+          "lending_rate_pct": 2.02591666666667,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2022,
+          "m2_local": 2508105100390.7764,
+          "m2_growth_pct": 3.0548466670748953,
+          "lending_rate_pct": 2.264455,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2023,
+          "m2_local": 2531321769179.0967,
+          "m2_growth_pct": 0.9256657061421869,
+          "lending_rate_pct": 4.89248125,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2024,
+          "m2_local": 2605494681361.047,
+          "m2_growth_pct": 2.930204807822756,
+          "lending_rate_pct": 5.25244583333333,
+          "m2_source": "oecd_ea19_alloc"
+        },
+        {
+          "year": 2025,
+          "m2_local": 2605494681361.047,
+          "m2_growth_pct": 0.0,
+          "lending_rate_pct": null,
+          "m2_source": "interpolated"
+        }
+      ]
     },
     "BR": {
       "name": "Brazil",
@@ -1414,271 +2664,323 @@
           "year": 1980,
           "m2_local": 0.535272727272727,
           "m2_growth_pct": 61.4035087719296,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1981,
           "m2_local": 1.00690909090909,
           "m2_growth_pct": 88.1114130434782,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1982,
           "m2_local": 1.85309090909091,
           "m2_growth_pct": 84.0375586854463,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1983,
           "m2_local": 4.36981818181818,
           "m2_growth_pct": 135.81240188383,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1984,
           "m2_local": 16.1738181818182,
           "m2_growth_pct": 270.125655321628,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1985,
           "m2_local": 68.3290909090909,
           "m2_growth_pct": 322.467287198165,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1986,
           "m2_local": 265.944727272727,
           "m2_growth_pct": 289.211569676166,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1987,
           "m2_local": 834.183272727273,
           "m2_growth_pct": 213.667911855916,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1988,
           "m2_local": 23632.0,
           "m2_growth_pct": 2732.95059642442,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1989,
           "m2_local": 473795.272727273,
           "m2_growth_pct": 1904.88859481751,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1990,
           "m2_local": 3510200.0,
           "m2_growth_pct": 640.868514747835,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1991,
           "m2_local": 21117945.4545455,
           "m2_growth_pct": 501.616587503433,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1992,
           "m2_local": 390551636.363637,
           "m2_growth_pct": 1749.38273093026,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1993,
           "m2_local": 13203194545.4545,
           "m2_growth_pct": 3280.65272709834,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1994,
           "m2_local": 158753000000.0,
           "m2_growth_pct": 1102.38325242776,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1995,
           "m2_local": 229084000000.0,
           "m2_growth_pct": 44.302154919907,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1996,
           "m2_local": 300180000000.0,
           "m2_growth_pct": 31.0349042272703,
-          "lending_rate_pct": null
+          "lending_rate_pct": null,
+          "m2_source": "worldbank"
         },
         {
           "year": 1997,
           "m2_local": 351941000000.0,
           "m2_growth_pct": 17.2433206742621,
-          "lending_rate_pct": 78.1933333333333
+          "lending_rate_pct": 78.1933333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1998,
           "m2_local": 394242014000.0,
           "m2_growth_pct": 12.019348129374,
-          "lending_rate_pct": 86.3633333333333
+          "lending_rate_pct": 86.3633333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1999,
           "m2_local": 465660313000.0,
           "m2_growth_pct": 18.115344500041,
-          "lending_rate_pct": 80.4433333333333
+          "lending_rate_pct": 80.4433333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2000,
           "m2_local": 557416988442.691,
           "m2_growth_pct": 19.7046372390105,
-          "lending_rate_pct": 56.83
+          "lending_rate_pct": 56.83,
+          "m2_source": "worldbank"
         },
         {
           "year": 2001,
           "m2_local": 771508635488.132,
           "m2_growth_pct": 38.4078080654788,
-          "lending_rate_pct": 57.6166666666667
+          "lending_rate_pct": 57.6166666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2002,
           "m2_local": 818907164287.306,
           "m2_growth_pct": 6.14361610731487,
-          "lending_rate_pct": 62.875
+          "lending_rate_pct": 62.875,
+          "m2_source": "worldbank"
         },
         {
           "year": 2003,
           "m2_local": 971094890951.926,
           "m2_growth_pct": 18.5842465790452,
-          "lending_rate_pct": 67.0833333333333
+          "lending_rate_pct": 67.0833333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2004,
           "m2_local": 1102841687961.79,
           "m2_growth_pct": 13.5668304135261,
-          "lending_rate_pct": 54.925
+          "lending_rate_pct": 54.925,
+          "m2_source": "worldbank"
         },
         {
           "year": 2005,
           "m2_local": 1305238544479.11,
           "m2_growth_pct": 18.3523037555262,
-          "lending_rate_pct": 55.3833333333333
+          "lending_rate_pct": 55.3833333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2006,
           "m2_local": 1523971762049.18,
           "m2_growth_pct": 16.7581028383866,
-          "lending_rate_pct": 50.8083333333333
+          "lending_rate_pct": 50.8083333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2007,
           "m2_local": 1859549944673.65,
           "m2_growth_pct": 22.0199737935591,
-          "lending_rate_pct": 43.7166666666667
+          "lending_rate_pct": 43.7166666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2008,
           "m2_local": 2192083185862.81,
           "m2_growth_pct": 17.8824581798215,
-          "lending_rate_pct": 47.25
+          "lending_rate_pct": 47.25,
+          "m2_source": "worldbank"
         },
         {
           "year": 2009,
           "m2_local": 2536123625537.77,
           "m2_growth_pct": 15.69467992336,
-          "lending_rate_pct": 44.65
+          "lending_rate_pct": 44.65,
+          "m2_source": "worldbank"
         },
         {
           "year": 2010,
           "m2_local": 2884051556660.11,
           "m2_growth_pct": 13.7188868720295,
-          "lending_rate_pct": 39.9916666666667
+          "lending_rate_pct": 39.9916666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2011,
           "m2_local": 3362167512548.42,
           "m2_growth_pct": 16.5779267982988,
-          "lending_rate_pct": 43.8833333333333
+          "lending_rate_pct": 43.8833333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2012,
           "m2_local": 3806205579487.22,
           "m2_growth_pct": 13.2068989805399,
-          "lending_rate_pct": 36.6366666666667
+          "lending_rate_pct": 36.6366666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2013,
           "m2_local": 4192066895321.63,
           "m2_growth_pct": 10.1376898272109,
-          "lending_rate_pct": 27.3916666666667
+          "lending_rate_pct": 27.3916666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2014,
           "m2_local": 4733341838290.4,
           "m2_growth_pct": 12.9118870591697,
-          "lending_rate_pct": 32.0083333333333
+          "lending_rate_pct": 32.0083333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2015,
           "m2_local": 5280467285252.21,
           "m2_growth_pct": 11.5589675466884,
-          "lending_rate_pct": 43.9583333333333
+          "lending_rate_pct": 43.9583333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2016,
           "m2_local": 5881954871034.07,
           "m2_growth_pct": 11.3908022394486,
-          "lending_rate_pct": 52.1
+          "lending_rate_pct": 52.1,
+          "m2_source": "worldbank"
         },
         {
           "year": 2017,
           "m2_local": 6128420362857.01,
           "m2_growth_pct": 4.19019691967834,
-          "lending_rate_pct": 46.9166666666667
+          "lending_rate_pct": 46.9166666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2018,
           "m2_local": 6563793038777.81,
           "m2_growth_pct": 7.10415817034185,
-          "lending_rate_pct": 39.0833333333333
+          "lending_rate_pct": 39.0833333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2019,
           "m2_local": 7097840403324.24,
           "m2_growth_pct": 8.13626147855922,
-          "lending_rate_pct": 37.475
+          "lending_rate_pct": 37.475,
+          "m2_source": "worldbank"
         },
         {
           "year": 2020,
           "m2_local": 8306196030728.18,
           "m2_growth_pct": 17.0242715916522,
-          "lending_rate_pct": 29.0416666666667
+          "lending_rate_pct": 29.0416666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2021,
           "m2_local": 9324469900167.44,
           "m2_growth_pct": 12.2592082545636,
-          "lending_rate_pct": 30.0166666666667
+          "lending_rate_pct": 30.0166666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2022,
           "m2_local": 10513325972534.1,
           "m2_growth_pct": 12.749851574354,
-          "lending_rate_pct": 39.4
+          "lending_rate_pct": 39.4,
+          "m2_source": "worldbank"
         },
         {
           "year": 2023,
           "m2_local": 12057873902263.7,
           "m2_growth_pct": 14.6913349187946,
-          "lending_rate_pct": 43.6
+          "lending_rate_pct": 43.6,
+          "m2_source": "worldbank"
         },
         {
           "year": 2024,
           "m2_local": 13710407423072.6,
           "m2_growth_pct": 13.7050157781022,
-          "lending_rate_pct": 40.225
+          "lending_rate_pct": 40.225,
+          "m2_source": "worldbank"
+        },
+        {
+          "year": 2025,
+          "m2_local": 14267232064219.28,
+          "m2_growth_pct": 4.061328186422997,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_m3"
         }
       ]
     },
@@ -1692,175 +2994,323 @@
           "year": 1980,
           "m2_local": 194042000000.0,
           "m2_growth_pct": 12.111810213833,
-          "lending_rate_pct": 14.25
+          "lending_rate_pct": 14.25,
+          "m2_source": "worldbank"
         },
         {
           "year": 1981,
           "m2_local": 251568000000.0,
           "m2_growth_pct": 29.6461590789623,
-          "lending_rate_pct": 19.2916666666667
+          "lending_rate_pct": 19.2916666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1982,
           "m2_local": 266550000000.0,
           "m2_growth_pct": 5.95544743369586,
-          "lending_rate_pct": 15.8125
+          "lending_rate_pct": 15.8125,
+          "m2_source": "worldbank"
         },
         {
           "year": 1983,
           "m2_local": 272948000000.0,
           "m2_growth_pct": 2.40030013130745,
-          "lending_rate_pct": 11.1666666666667
+          "lending_rate_pct": 11.1666666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1984,
           "m2_local": 293306000000.0,
           "m2_growth_pct": 7.4585635359116,
-          "lending_rate_pct": 12.0625
+          "lending_rate_pct": 12.0625,
+          "m2_source": "worldbank"
         },
         {
           "year": 1985,
           "m2_local": 314357000000.0,
           "m2_growth_pct": 7.17714605224578,
-          "lending_rate_pct": 10.5833333333333
+          "lending_rate_pct": 10.5833333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1986,
           "m2_local": 341363000000.0,
           "m2_growth_pct": 8.59086961639156,
-          "lending_rate_pct": 10.5208333333333
+          "lending_rate_pct": 10.5208333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1987,
           "m2_local": 370386000000.0,
           "m2_growth_pct": 8.50209307980068,
-          "lending_rate_pct": 9.52083333333333
+          "lending_rate_pct": 9.52083333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1988,
           "m2_local": 415694000000.0,
           "m2_growth_pct": 12.2326437824324,
-          "lending_rate_pct": 10.8333333333333
+          "lending_rate_pct": 10.8333333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1989,
           "m2_local": 471361000000.0,
           "m2_growth_pct": 13.3913407458371,
-          "lending_rate_pct": 13.3333333333333
+          "lending_rate_pct": 13.3333333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1990,
           "m2_local": 509510000000.0,
           "m2_growth_pct": 8.09337217122333,
-          "lending_rate_pct": 14.0625
+          "lending_rate_pct": 14.0625,
+          "m2_source": "worldbank"
         },
         {
           "year": 1991,
           "m2_local": 529294000000.0,
           "m2_growth_pct": 3.88294636022846,
-          "lending_rate_pct": 9.9375
+          "lending_rate_pct": 9.9375,
+          "m2_source": "worldbank"
         },
         {
           "year": 1992,
           "m2_local": 563174000000.0,
           "m2_growth_pct": 6.40097941786606,
-          "lending_rate_pct": 7.47916666666667
+          "lending_rate_pct": 7.47916666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1993,
           "m2_local": 573903000000.0,
           "m2_growth_pct": 1.90509505055276,
-          "lending_rate_pct": 5.9375
+          "lending_rate_pct": 5.9375,
+          "m2_source": "worldbank"
         },
         {
           "year": 1994,
           "m2_local": 600478000000.0,
           "m2_growth_pct": 4.63057345927796,
-          "lending_rate_pct": 6.875
+          "lending_rate_pct": 6.875,
+          "m2_source": "worldbank"
         },
         {
           "year": 1995,
           "m2_local": 629481000000.0,
           "m2_growth_pct": 4.82998544492887,
-          "lending_rate_pct": 8.64583333333333
+          "lending_rate_pct": 8.64583333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1996,
           "m2_local": 654945000000.0,
           "m2_growth_pct": 4.0452372668913,
-          "lending_rate_pct": 6.0625
+          "lending_rate_pct": 6.0625,
+          "m2_source": "worldbank"
         },
         {
           "year": 1997,
           "m2_local": 683580000000.0,
           "m2_growth_pct": 4.37212285001031,
-          "lending_rate_pct": 4.95833333333333
+          "lending_rate_pct": 4.95833333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 1998,
           "m2_local": 700126333333.333,
           "m2_growth_pct": 2.42054087792694,
-          "lending_rate_pct": 6.60416666666667
+          "lending_rate_pct": 6.60416666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 1999,
           "m2_local": 737669000000.0,
           "m2_growth_pct": 5.36227033311612,
-          "lending_rate_pct": 6.4375
+          "lending_rate_pct": 6.4375,
+          "m2_source": "worldbank"
         },
         {
           "year": 2000,
           "m2_local": 786527000000.0,
           "m2_growth_pct": 6.62329581424731,
-          "lending_rate_pct": 7.27083333333333
+          "lending_rate_pct": 7.27083333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2001,
           "m2_local": 1769929603000.0,
           "m2_growth_pct": 125.031003767194,
-          "lending_rate_pct": 5.8125
+          "lending_rate_pct": 5.8125,
+          "m2_source": "worldbank"
         },
         {
           "year": 2002,
           "m2_local": 1816930537000.0,
           "m2_growth_pct": 2.65552561640498,
-          "lending_rate_pct": 4.20833333333333
+          "lending_rate_pct": 4.20833333333333,
+          "m2_source": "worldbank"
         },
         {
           "year": 2003,
           "m2_local": 1826209004000.0,
           "m2_growth_pct": 0.510667128492431,
-          "lending_rate_pct": 4.6875
+          "lending_rate_pct": 4.6875,
+          "m2_source": "worldbank"
         },
         {
           "year": 2004,
           "m2_local": 1925976772000.0,
           "m2_growth_pct": 5.46310787984703,
-          "lending_rate_pct": 4.0
+          "lending_rate_pct": 4.0,
+          "m2_source": "worldbank"
         },
         {
           "year": 2005,
           "m2_local": 2111740913000.0,
           "m2_growth_pct": 9.64519114148487,
-          "lending_rate_pct": 4.41666666666667
+          "lending_rate_pct": 4.41666666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2006,
           "m2_local": 2375275453000.0,
           "m2_growth_pct": 12.4794920805704,
-          "lending_rate_pct": 5.8125
+          "lending_rate_pct": 5.8125,
+          "m2_source": "worldbank"
         },
         {
           "year": 2007,
           "m2_local": 1768376277000.0,
           "m2_growth_pct": -25.5506861418317,
-          "lending_rate_pct": 6.10416666666667
+          "lending_rate_pct": 6.10416666666667,
+          "m2_source": "worldbank"
         },
         {
           "year": 2008,
           "m2_local": 2032249287000.0,
           "m2_growth_pct": 14.9217682589394,
-          "lending_rate_pct": 4.72916666666667
+          "lending_rate_pct": 4.72916666666667,
+          "m2_source": "worldbank"
+        },
+        {
+          "year": 2009,
+          "m2_local": 1606883599266.3079,
+          "m2_growth_pct": -20.93078297306802,
+          "lending_rate_pct": 2.39583333333333,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2010,
+          "m2_local": 1695271890418.6482,
+          "m2_growth_pct": 5.500603229300349,
+          "lending_rate_pct": 2.60416666666667,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2011,
+          "m2_local": 1819708948417.8525,
+          "m2_growth_pct": 7.34024192240188,
+          "lending_rate_pct": 3.0,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2012,
+          "m2_local": 1944046906683.4478,
+          "m2_growth_pct": 6.832848647235634,
+          "lending_rate_pct": 3.0,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2013,
+          "m2_local": 2073585123470.164,
+          "m2_growth_pct": 6.663327738717428,
+          "lending_rate_pct": 3.0,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2014,
+          "m2_local": 2246851097711.754,
+          "m2_growth_pct": 8.355865032038224,
+          "lending_rate_pct": 3.0,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2015,
+          "m2_local": 2414458477164.2827,
+          "m2_growth_pct": 7.459656744642507,
+          "lending_rate_pct": 2.775,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2016,
+          "m2_local": 2620728378937.607,
+          "m2_growth_pct": 8.543112409022768,
+          "lending_rate_pct": 2.7,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2017,
+          "m2_local": 2778549659696.2686,
+          "m2_growth_pct": 6.02203883573158,
+          "lending_rate_pct": 2.7,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2018,
+          "m2_local": 2913518541884.7456,
+          "m2_growth_pct": 4.857529960548956,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2019,
+          "m2_local": 3138951854644.6675,
+          "m2_growth_pct": 7.7374936702510055,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2020,
+          "m2_local": 3542173805738.75,
+          "m2_growth_pct": 12.845751377085946,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2021,
+          "m2_local": 3789857486187.1826,
+          "m2_growth_pct": 6.992420305495872,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2022,
+          "m2_local": 4111970021562.4893,
+          "m2_growth_pct": 8.499331084329786,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2023,
+          "m2_local": 4355655027759.808,
+          "m2_growth_pct": 5.926234990028512,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2024,
+          "m2_local": 4599845442598.531,
+          "m2_growth_pct": 5.606284549222318,
+          "lending_rate_pct": null,
+          "m2_source": "oecd_m3"
+        },
+        {
+          "year": 2025,
+          "m2_local": 4599845442598.531,
+          "m2_growth_pct": 0.0,
+          "lending_rate_pct": null,
+          "m2_source": "interpolated"
         }
       ]
     }
@@ -1868,340 +3318,340 @@
   "fx": {
     "usdPerCurrency": {
       "BRL": {
-        "1980": 0.34470871090888977,
-        "1981": 0.34470871090888977,
-        "1982": 0.34470871090888977,
-        "1983": 0.34470871090888977,
-        "1984": 0.34470871090888977,
-        "1985": 0.34470871090888977,
-        "1986": 0.34470871090888977,
-        "1987": 0.34470871090888977,
-        "1988": 0.34470871090888977,
-        "1989": 0.34470871090888977,
-        "1990": 0.34470871090888977,
-        "1991": 0.34470871090888977,
-        "1992": 0.34470871090888977,
-        "1993": 0.34470871090888977,
-        "1994": 0.34470871090888977,
-        "1995": 0.34470871090888977,
-        "1996": 0.34470871090888977,
-        "1997": 0.34470871090888977,
-        "1998": 0.34470871090888977,
-        "1999": 0.34470871090888977,
-        "2000": 0.34470871090888977,
-        "2001": 0.34470871090888977,
-        "2002": 0.34470871090888977,
-        "2003": 0.34470871090888977,
-        "2004": 0.33475952595472336,
-        "2005": 0.3987857885658741,
-        "2006": 0.46281205117702484,
-        "2007": 0.5216163123647372,
-        "2008": 0.5594411790370941,
-        "2009": 0.5123971427480379,
-        "2010": 0.571519618233045,
-        "2011": 0.6010665198167165,
-        "2012": 0.513935441772143,
-        "2013": 0.46288110812505084,
-        "2014": 0.42793938517570496,
-        "2015": 0.2999776192009449,
-        "2016": 0.2908015102148056,
-        "2017": 0.31203892081975937,
-        "2018": 0.27389680594205856,
-        "2019": 0.2535116833945115,
-        "2020": 0.19351277500391006,
-        "2021": 0.18504829704761505,
-        "2022": 0.19472776477535567,
-        "2023": 0.20109326019883156,
-        "2024": 0.1843887778619925,
-        "2025": 0.17990066980322203
+        "1980": 43835964388.892555,
+        "1981": 24813828449.87909,
+        "1982": 12872424549.879719,
+        "1983": 4004514333.5201964,
+        "1984": 1250404312.0226934,
+        "1985": 372683445.23988825,
+        "1986": 169213834.98072594,
+        "1987": 58905623.668761715,
+        "1988": 8806873.510121647,
+        "1989": 815403.0053431625,
+        "1990": 33832.626329914085,
+        "1991": 5683.063189650701,
+        "1992": 512.0266031030807,
+        "1993": 26.125614984976412,
+        "1994": 1.5044754064621175,
+        "1995": 1.089720305121685,
+        "1996": 0.9949258780220872,
+        "1997": 0.9276509558670029,
+        "1998": 0.8616851689620978,
+        "1999": 0.5512883246420862,
+        "2000": 0.5466204006787829,
+        "2001": 0.42559861446897507,
+        "2002": 0.3424231829810922,
+        "2003": 0.32494170107037446,
+        "2004": 0.3418663809320714,
+        "2005": 0.4107805179600021,
+        "2006": 0.45970107171643115,
+        "2007": 0.5135952954670944,
+        "2008": 0.545325650300837,
+        "2009": 0.5001429975988687,
+        "2010": 0.5684315693832481,
+        "2011": 0.5977898197036989,
+        "2012": 0.5120147824320672,
+        "2013": 0.46380271400844725,
+        "2014": 0.4249980517341978,
+        "2015": 0.30057972365522506,
+        "2016": 0.28642515845785516,
+        "2017": 0.3133431431125459,
+        "2018": 0.2736857679484411,
+        "2019": 0.2535194137173425,
+        "2020": 0.19397969327897246,
+        "2021": 0.18537740130901748,
+        "2022": 0.19364944870785897,
+        "2023": 0.2002250624660059,
+        "2024": 0.1855654257282818,
+        "2025": 0.1855654257282818
       },
       "CAD": {
-        "1980": 0.7668887774149576,
-        "1981": 0.7668887774149576,
-        "1982": 0.7668887774149576,
-        "1983": 0.7668887774149576,
-        "1984": 0.7668887774149576,
-        "1985": 0.7668887774149576,
-        "1986": 0.7668887774149576,
-        "1987": 0.7668887774149576,
-        "1988": 0.7668887774149576,
-        "1989": 0.7668887774149576,
-        "1990": 0.7668887774149576,
-        "1991": 0.7668887774149576,
-        "1992": 0.7668887774149576,
-        "1993": 0.7668887774149576,
-        "1994": 0.7668887774149576,
-        "1995": 0.7668887774149576,
-        "1996": 0.7668887774149576,
-        "1997": 0.7668887774149576,
-        "1998": 0.7668887774149576,
-        "1999": 0.7668887774149576,
-        "2000": 0.7668887774149576,
-        "2001": 0.7668887774149576,
-        "2002": 0.7668887774149576,
-        "2003": 0.7668887774149576,
-        "2004": 0.773598646124204,
-        "2005": 0.8277950535217921,
-        "2006": 0.8854482372601827,
-        "2007": 0.9414455393950144,
-        "2008": 0.9402671506007513,
-        "2009": 0.8839109142621359,
-        "2010": 0.9660851508378983,
-        "2011": 1.0128557185331981,
-        "2012": 1.001247152686119,
-        "2013": 0.966006393233935,
-        "2014": 0.9027799715598425,
-        "2015": 0.776640792687734,
-        "2016": 0.7571344375610352,
-        "2017": 0.7724828372399012,
-        "2018": 0.7699200958013535,
-        "2019": 0.7554257263739904,
-        "2020": 0.746156300107638,
-        "2021": 0.7973109930753708,
-        "2022": 0.7671544800202051,
-        "2023": 0.7407091955343882,
-        "2024": 0.7289256403843561,
-        "2025": 0.7161225428183874
+        "1980": 0.8552660125326095,
+        "1981": 0.8340957518777021,
+        "1982": 0.8105468934562983,
+        "1983": 0.8114170748394699,
+        "1984": 0.7721616508344581,
+        "1985": 0.7323285147357935,
+        "1986": 0.719698329377041,
+        "1987": 0.7541577195856284,
+        "1988": 0.8125451467011509,
+        "1989": 0.8446145085454803,
+        "1990": 0.8570642814895277,
+        "1991": 0.8728091498427689,
+        "1992": 0.8273194654073408,
+        "1993": 0.7751409917191809,
+        "1994": 0.7322394689818409,
+        "1995": 0.7286264259706443,
+        "1996": 0.7333950365876225,
+        "1997": 0.7222312754581351,
+        "1998": 0.6740791548749657,
+        "1999": 0.6730812117584022,
+        "2000": 0.6732220111592675,
+        "2001": 0.6456445010808105,
+        "2002": 0.6368036190840247,
+        "2003": 0.7137684628503117,
+        "2004": 0.7684731758616781,
+        "2005": 0.825487668655048,
+        "2006": 0.8815662269380805,
+        "2007": 0.9310591466759406,
+        "2008": 0.9371307836496466,
+        "2009": 0.8760131265490296,
+        "2010": 0.9707675343215365,
+        "2011": 1.010858481448809,
+        "2012": 1.0006356602141497,
+        "2013": 0.9707443251829719,
+        "2014": 0.9051845175164137,
+        "2015": 0.7819915457054967,
+        "2016": 0.7543667478670676,
+        "2017": 0.7704541042818926,
+        "2018": 0.7717133543899821,
+        "2019": 0.7536968665528111,
+        "2020": 0.7456272657920663,
+        "2021": 0.7975264543942239,
+        "2022": 0.7683118831453202,
+        "2023": 0.7407908726414894,
+        "2024": 0.7302682792347481,
+        "2025": 0.7302682792347481
       },
       "CNY": {
-        "1980": 0.1208176923294862,
-        "1981": 0.1208176923294862,
-        "1982": 0.1208176923294862,
-        "1983": 0.1208176923294862,
-        "1984": 0.1208176923294862,
-        "1985": 0.1208176923294862,
-        "1986": 0.1208176923294862,
-        "1987": 0.1208176923294862,
-        "1988": 0.1208176923294862,
-        "1989": 0.1208176923294862,
-        "1990": 0.1208176923294862,
-        "1991": 0.1208176923294862,
-        "1992": 0.1208176923294862,
-        "1993": 0.1208176923294862,
-        "1994": 0.1208176923294862,
-        "1995": 0.1208176923294862,
-        "1996": 0.1208176923294862,
-        "1997": 0.1208176923294862,
-        "1998": 0.1208176923294862,
-        "1999": 0.1208176923294862,
-        "2000": 0.1208176923294862,
-        "2001": 0.1208176923294862,
-        "2002": 0.12083023848632972,
-        "2003": 0.1208444893360138,
-        "2004": 0.12096663936972618,
-        "2005": 0.12236737584074338,
-        "2006": 0.12579983907441297,
-        "2007": 0.13207720095912615,
-        "2008": 0.14466695239146551,
-        "2009": 0.14659525950749716,
-        "2010": 0.14810732007026672,
-        "2011": 0.15515474478403726,
-        "2012": 0.15865626061956087,
-        "2013": 0.16297467425465584,
-        "2014": 0.1622602716088295,
-        "2015": 0.15918119127551714,
-        "2016": 0.15031185746192932,
-        "2017": 0.14829862987001738,
-        "2018": 0.15096654370427132,
-        "2019": 0.1449446901679039,
-        "2020": 0.14502058923244476,
-        "2021": 0.15517778446276984,
-        "2022": 0.14833660423755646,
-        "2023": 0.14135740945736566,
-        "2024": 0.13912193352977434,
-        "2025": 0.13954575608174005
+        "1980": 0.6673847467857881,
+        "1981": 0.5866679706600847,
+        "1982": 0.528389952017081,
+        "1983": 0.5061561240698976,
+        "1984": 0.4310267416948379,
+        "1985": 0.3405231002454752,
+        "1986": 0.289620717542318,
+        "1987": 0.26866553827140593,
+        "1988": 0.26866553827140593,
+        "1989": 0.2655966074460011,
+        "1990": 0.20906469681263462,
+        "1991": 0.18785016444716465,
+        "1992": 0.18133708902593262,
+        "1993": 0.17355210540397847,
+        "1994": 0.11602620459565881,
+        "1995": 0.11974016384445747,
+        "1996": 0.1202765157096164,
+        "1997": 0.12062992949180616,
+        "1998": 0.12078814263066513,
+        "1999": 0.12079847793917797,
+        "2000": 0.1207947691838452,
+        "2001": 0.12081572360262022,
+        "2002": 0.12081734139627998,
+        "2003": 0.12081618582495905,
+        "2004": 0.1208196282762634,
+        "2005": 0.12203580123622262,
+        "2006": 0.12541640860498707,
+        "2007": 0.13144866617395326,
+        "2008": 0.14391274282576988,
+        "2009": 0.14638253510286375,
+        "2010": 0.14770461790506262,
+        "2011": 0.1547637522631315,
+        "2012": 0.1584200370026903,
+        "2013": 0.16140074291830928,
+        "2014": 0.16277540942404004,
+        "2015": 0.16057837316318166,
+        "2016": 0.1505009160491483,
+        "2017": 0.14795624153058579,
+        "2018": 0.1511497086805334,
+        "2019": 0.14475163132378402,
+        "2020": 0.14491142230330714,
+        "2021": 0.15506339721442297,
+        "2022": 0.14843053752349045,
+        "2023": 0.14116321605770762,
+        "2024": 0.13893730259736073,
+        "2025": 0.13893730259736073
       },
       "EUR": {
-        "1980": 1.2590018510818481,
-        "1981": 1.2590018510818481,
-        "1982": 1.2590018510818481,
-        "1983": 1.2590018510818481,
-        "1984": 1.2590018510818481,
-        "1985": 1.2590018510818481,
-        "1986": 1.2590018510818481,
-        "1987": 1.2590018510818481,
-        "1988": 1.2590018510818481,
-        "1989": 1.2590018510818481,
-        "1990": 1.2590018510818481,
-        "1991": 1.2590018510818481,
-        "1992": 1.2590018510818481,
-        "1993": 1.2590018510818481,
-        "1994": 1.2590018510818481,
-        "1995": 1.2590018510818481,
-        "1996": 1.2590018510818481,
-        "1997": 1.2590018510818481,
-        "1998": 1.2590018510818481,
-        "1999": 1.2590018510818481,
-        "2000": 1.2590018510818481,
-        "2001": 1.2590018510818481,
-        "2002": 1.2590018510818481,
-        "2003": 1.2590018510818481,
-        "2004": 1.2498681247234344,
-        "2005": 1.2390747368335724,
-        "2006": 1.2658967276414235,
-        "2007": 1.38006791472435,
-        "2008": 1.4707214335600536,
-        "2009": 1.3960712949434917,
-        "2010": 1.3196341395378113,
-        "2011": 1.3985152840614319,
-        "2012": 1.2918589015801747,
-        "2013": 1.3316034575303395,
-        "2014": 1.3212153017520905,
-        "2015": 1.1045748094717662,
-        "2016": 1.1041944026947021,
-        "2017": 1.13656547665596,
-        "2018": 1.1803422272205353,
-        "2019": 1.1191470722357433,
-        "2020": 1.1483728388945262,
-        "2021": 1.1800119578838348,
-        "2022": 1.0529276380936305,
-        "2023": 1.0857087969779968,
-        "2024": 1.0804201165835063,
-        "2025": 1.132062961657842
+        "1980": 0.5501558777508518,
+        "1981": 0.4424778762856665,
+        "1982": 0.4121006488707792,
+        "1983": 0.39165641302480175,
+        "1984": 0.35137754645088914,
+        "1985": 0.3396777590518279,
+        "1986": 0.4605147019848783,
+        "1987": 0.5563617649649714,
+        "1988": 0.5694031231761306,
+        "1989": 0.5319031049843744,
+        "1990": 0.6189140122132378,
+        "1991": 0.6025760124532363,
+        "1992": 0.6403483495021292,
+        "1993": 0.6048432825853031,
+        "1994": 0.6162210960211104,
+        "1995": 0.6977721878472507,
+        "1996": 0.6645515467714133,
+        "1997": 0.5766827000476255,
+        "1998": 0.5682891473366902,
+        "1999": 1.0657764478764002,
+        "2000": 0.9236125490196013,
+        "2001": 0.8956295275591043,
+        "2002": 0.9455737254901978,
+        "2003": 1.1311603921569,
+        "2004": 1.2439023166022998,
+        "2005": 1.2440902723735,
+        "2006": 1.2555988235294004,
+        "2007": 1.3704780392157,
+        "2008": 1.4707554687499997,
+        "2009": 1.3947824218749991,
+        "2010": 1.3257166666667008,
+        "2011": 1.3919552529183004,
+        "2012": 1.2847886718750003,
+        "2013": 1.3281180392157006,
+        "2014": 1.3285007843136996,
+        "2015": 1.1095128906249994,
+        "2016": 1.1069031128405002,
+        "2017": 1.1296811764706003,
+        "2018": 1.1809545098038996,
+        "2019": 1.1194745098038998,
+        "2020": 1.1421961089494,
+        "2021": 1.1827403100775005,
+        "2022": 1.0530486381322999,
+        "2023": 1.0812686274509995,
+        "2024": 1.0823804687499998,
+        "2025": 1.0823804687499998
       },
       "GBP": {
-        "1980": 1.7888127565383911,
-        "1981": 1.7888127565383911,
-        "1982": 1.7888127565383911,
-        "1983": 1.7888127565383911,
-        "1984": 1.7888127565383911,
-        "1985": 1.7888127565383911,
-        "1986": 1.7888127565383911,
-        "1987": 1.7888127565383911,
-        "1988": 1.7888127565383911,
-        "1989": 1.7888127565383911,
-        "1990": 1.7888127565383911,
-        "1991": 1.7888127565383911,
-        "1992": 1.7888127565383911,
-        "1993": 1.7888127565383911,
-        "1994": 1.7888127565383911,
-        "1995": 1.7888127565383911,
-        "1996": 1.7888127565383911,
-        "1997": 1.7888127565383911,
-        "1998": 1.7888127565383911,
-        "1999": 1.7888127565383911,
-        "2000": 1.7888127565383911,
-        "2001": 1.7888127565383911,
-        "2002": 1.7888127565383911,
-        "2003": 1.7888127565383911,
-        "2004": 1.840168724457423,
-        "2005": 1.812703828016917,
-        "2006": 1.8576956192652385,
-        "2007": 2.008263756831487,
-        "2008": 1.842090497414271,
-        "2009": 1.5713030695915222,
-        "2010": 1.5402828951676686,
-        "2011": 1.6051564415295918,
-        "2012": 1.5920513272285461,
-        "2013": 1.5658536752065022,
-        "2014": 1.644817461570104,
-        "2015": 1.5271874368190765,
-        "2016": 1.3459891080856323,
-        "2017": 1.2981469929218292,
-        "2018": 1.330900063117345,
-        "2019": 1.2773079971472423,
-        "2020": 1.2888210813204448,
-        "2021": 1.3746077915032704,
-        "2022": 1.232669750849406,
-        "2023": 1.2481405138969421,
-        "2024": 1.2793143093585968,
-        "2025": 1.3201149900754292
+        "1980": 2.3239870375532763,
+        "1981": 2.009479388119177,
+        "1982": 1.7468871229908471,
+        "1983": 1.5157840510704779,
+        "1984": 1.3301292006201335,
+        "1985": 1.2832917978671985,
+        "1986": 1.4658515229220097,
+        "1987": 1.6341831903014494,
+        "1988": 1.778820825604109,
+        "1989": 1.6361986034226819,
+        "1990": 1.7756401700708146,
+        "1991": 1.7636207368877748,
+        "1992": 1.7550813260809461,
+        "1993": 1.4997977822650181,
+        "1994": 1.5303937636199059,
+        "1995": 1.578113161192329,
+        "1996": 1.5601640078728682,
+        "1997": 1.6371003233236294,
+        "1998": 1.656112827754095,
+        "1999": 1.6179741525231388,
+        "2000": 1.5130176253944885,
+        "2001": 1.4395635243394203,
+        "2002": 1.4987485449649551,
+        "2003": 1.6327263673062873,
+        "2004": 1.8308982386758943,
+        "2005": 1.8181873278403884,
+        "2006": 1.839971541773486,
+        "2007": 2.0009137506127783,
+        "2008": 1.838349346122117,
+        "2009": 1.5578283078059356,
+        "2010": 1.5451667406574165,
+        "2011": 1.6022024881829389,
+        "2012": 1.5796615695227247,
+        "2013": 1.5633291076509994,
+        "2014": 1.6454685698584965,
+        "2015": 1.5277777208583634,
+        "2016": 1.3501937177055203,
+        "2017": 1.2870399108799766,
+        "2018": 1.3341666711627915,
+        "2019": 1.2764136085867888,
+        "2020": 1.282051977815708,
+        "2021": 1.3753929512152157,
+        "2022": 1.2325870640858902,
+        "2023": 1.2429479688670735,
+        "2024": 1.2780947905386217,
+        "2025": 1.2780947905386217
       },
       "INR": {
-        "1980": 0.021963540464639664,
-        "1981": 0.021963540464639664,
-        "1982": 0.021963540464639664,
-        "1983": 0.021963540464639664,
-        "1984": 0.021963540464639664,
-        "1985": 0.021963540464639664,
-        "1986": 0.021963540464639664,
-        "1987": 0.021963540464639664,
-        "1988": 0.021963540464639664,
-        "1989": 0.021963540464639664,
-        "1990": 0.021963540464639664,
-        "1991": 0.021963540464639664,
-        "1992": 0.021963540464639664,
-        "1993": 0.021963540464639664,
-        "1994": 0.021963540464639664,
-        "1995": 0.021963540464639664,
-        "1996": 0.021963540464639664,
-        "1997": 0.021963540464639664,
-        "1998": 0.021963540464639664,
-        "1999": 0.021963540464639664,
-        "2000": 0.021963540464639664,
-        "2001": 0.021963540464639664,
-        "2002": 0.021963540464639664,
-        "2003": 0.021963540464639664,
-        "2004": 0.02221915079280734,
-        "2005": 0.02271332498639822,
-        "2006": 0.022170040290802717,
-        "2007": 0.02445347032820185,
-        "2008": 0.023049113651116688,
-        "2009": 0.020762689877301455,
-        "2010": 0.021948921028524637,
-        "2011": 0.021423595491796732,
-        "2012": 0.018658207419017952,
-        "2013": 0.017067774043728907,
-        "2014": 0.016388492348293465,
-        "2015": 0.015550014950955907,
-        "2016": 0.014851972771187624,
-        "2017": 0.015398535023753842,
-        "2018": 0.014614196261391044,
-        "2019": 0.0141844826284796,
-        "2020": 0.013503041118383408,
-        "2021": 0.013530090606460968,
-        "2022": 0.012696040406202277,
-        "2023": 0.01212284566524128,
-        "2024": 0.011936157553767165,
-        "2025": 0.01145421527326107
+        "1980": 0.12717881633521766,
+        "1981": 0.11549314139657357,
+        "1982": 0.10576267015993611,
+        "1983": 0.09902070263848428,
+        "1984": 0.08800815542756583,
+        "1985": 0.08084891359544737,
+        "1986": 0.07929690081331724,
+        "1987": 0.07715156424796513,
+        "1988": 0.07185413610370964,
+        "1989": 0.061631382700070875,
+        "1990": 0.05713143085668581,
+        "1991": 0.043970668632644185,
+        "1992": 0.03858309995916627,
+        "1993": 0.03279409815546858,
+        "1994": 0.03187378745140144,
+        "1995": 0.030838425871054436,
+        "1996": 0.02822214060797267,
+        "1997": 0.02753813038538262,
+        "1998": 0.024236921726740097,
+        "1999": 0.02322587508032762,
+        "2000": 0.022251096728743886,
+        "2001": 0.021192540642480464,
+        "2002": 0.020571763714847705,
+        "2003": 0.021466927845236888,
+        "2004": 0.022067033764032826,
+        "2005": 0.0226757498161847,
+        "2006": 0.02207164049859102,
+        "2007": 0.024184654675377462,
+        "2008": 0.022985766830082716,
+        "2009": 0.02065890901678746,
+        "2010": 0.021869485824530653,
+        "2011": 0.02142682667268521,
+        "2012": 0.018713543677722846,
+        "2013": 0.017065473873474107,
+        "2014": 0.01638551459626259,
+        "2015": 0.015587992045547628,
+        "2016": 0.014881990398146208,
+        "2017": 0.015355895455318819,
+        "2018": 0.014622134701418472,
+        "2019": 0.014200442548121755,
+        "2020": 0.013495355533869572,
+        "2021": 0.013528502213619927,
+        "2022": 0.01272191948046769,
+        "2023": 0.012106643581228094,
+        "2024": 0.01195181769348178,
+        "2025": 0.01195181769348178
       },
       "JPY": {
-        "1980": 0.00872452494998773,
-        "1981": 0.00872452494998773,
-        "1982": 0.00872452494998773,
-        "1983": 0.00872452494998773,
-        "1984": 0.00872452494998773,
-        "1985": 0.00872452494998773,
-        "1986": 0.00872452494998773,
-        "1987": 0.00872452494998773,
-        "1988": 0.00872452494998773,
-        "1989": 0.00872452494998773,
-        "1990": 0.00872452494998773,
-        "1991": 0.00872452494998773,
-        "1992": 0.00872452494998773,
-        "1993": 0.00872452494998773,
-        "1994": 0.00872452494998773,
-        "1995": 0.00872452494998773,
-        "1996": 0.00872452494998773,
-        "1997": 0.008221582470772168,
-        "1998": 0.0076949305754775805,
-        "1999": 0.008897088235244155,
-        "2000": 0.009236437811826667,
-        "2001": 0.008181999515121182,
-        "2002": 0.008029948105104268,
-        "2003": 0.008649327559396625,
-        "2004": 0.009312942546481887,
-        "2005": 0.009040710361053547,
-        "2006": 0.008616970774407188,
-        "2007": 0.008522127444545427,
-        "2008": 0.009766404672215382,
-        "2009": 0.010696619283407927,
-        "2010": 0.011473143706098199,
-        "2011": 0.012609652864436308,
-        "2012": 0.012495546524102489,
-        "2013": 0.010221338830888271,
-        "2014": 0.009423758136108518,
-        "2015": 0.008268469789375862,
-        "2016": 0.009206507820636034,
-        "2017": 0.008929539239034057,
-        "2018": 0.009072743821889162,
-        "2019": 0.00916501033740739,
-        "2020": 0.009417057347794374,
-        "2021": 0.009061973541975021,
-        "2022": 0.007634877227246761,
-        "2023": 0.00709549430757761,
-        "2024": 0.006582194667619963,
-        "2025": 0.0066880630717302365
+        "1980": 0.004410321622714068,
+        "1981": 0.004534410507752611,
+        "1982": 0.004014828098457023,
+        "1983": 0.00421031949308788,
+        "1984": 0.004210127461620723,
+        "1985": 0.004192242255716069,
+        "1986": 0.00593401963567979,
+        "1987": 0.006913836314925244,
+        "1988": 0.007803253956900006,
+        "1989": 0.0072482457735176704,
+        "1990": 0.00690643507087729,
+        "1991": 0.007423537563100052,
+        "1992": 0.007895692636477068,
+        "1993": 0.008992984819849146,
+        "1994": 0.009783988530491184,
+        "1995": 0.010631559367579917,
+        "1996": 0.009192946056374733,
+        "1997": 0.008265086960595887,
+        "1998": 0.007639110065881653,
+        "1999": 0.008779106744324888,
+        "2000": 0.009279407746131021,
+        "2001": 0.008228492228158234,
+        "2002": 0.007975243620929924,
+        "2003": 0.008625637189296707,
+        "2004": 0.009242778942235245,
+        "2005": 0.0090729107728975,
+        "2006": 0.008598503169702027,
+        "2007": 0.008492314473094148,
+        "2008": 0.009674969967511078,
+        "2009": 0.010687175888757873,
+        "2010": 0.011392132877837887,
+        "2011": 0.012530226064106984,
+        "2012": 0.012532827325946813,
+        "2013": 0.010246357447123483,
+        "2014": 0.009438879293911063,
+        "2015": 0.008261456890161018,
+        "2016": 0.009191776297621556,
+        "2017": 0.00891534638131209,
+        "2018": 0.009056069622043184,
+        "2019": 0.009173498439206604,
+        "2020": 0.009365524816965707,
+        "2021": 0.009111258354277807,
+        "2022": 0.007604670276137147,
+        "2023": 0.007117888603308472,
+        "2024": 0.006606490727845553,
+        "2025": 0.006606490727845553
       },
       "USD": {
         "1980": 1.0,
@@ -2253,13 +3703,13 @@
       }
     },
     "sources": {
-      "BRL": "yfinance:BRLUSD=X",
-      "CAD": "yfinance:CADUSD=X",
-      "CNY": "yfinance:CNYUSD=X",
-      "EUR": "yfinance:EURUSD=X",
-      "GBP": "yfinance:GBPUSD=X",
-      "INR": "yfinance:INRUSD=X",
-      "JPY": "yfinance:JPYUSD=X",
+      "BRL": "worldbank:PA.NUS.FCRF:BR",
+      "CAD": "worldbank:PA.NUS.FCRF:CA",
+      "CNY": "worldbank:PA.NUS.FCRF:CN",
+      "EUR": "worldbank:PA.NUS.FCRF:DE",
+      "GBP": "worldbank:PA.NUS.FCRF:GB",
+      "INR": "worldbank:PA.NUS.FCRF:IN",
+      "JPY": "worldbank:PA.NUS.FCRF:JP",
       "USD": "fixed"
     },
     "baseCurrencies": [
@@ -2333,16 +3783,94 @@
       "url": "https://data.worldbank.org/indicator/FM.LBL.BMNY.ZG"
     },
     {
-      "name": "World Bank - Official Exchange Rate (LCU per USD)",
-      "url": "https://data.worldbank.org/indicator/PA.NUS.FCRF"
-    },
-    {
       "name": "World Bank - Lending Interest Rate (%)",
       "url": "https://data.worldbank.org/indicator/FR.INR.LEND"
+    },
+    {
+      "name": "OECD SDMX - Monetary Aggregates (DF_MONAGG, MABM/MANM)",
+      "url": "https://sdmx.oecd.org/public/rest/dataflow/OECD.SDD.STES/DSD_STES@DF_MONAGG/4.0"
+    },
+    {
+      "name": "World Bank - Official Exchange Rate (LCU per USD)",
+      "url": "https://data.worldbank.org/indicator/PA.NUS.FCRF"
     },
     {
       "name": "Yahoo Finance (yfinance)",
       "url": "https://finance.yahoo.com/"
     }
-  ]
+  ],
+  "diagnostics": {
+    "globalOecdToWbScale": 1.0753884295468306,
+    "countryScaleFactors": {
+      "US": 1.3441789943089986,
+      "CN": 0.9996980291264361,
+      "JP": 1.0243444419254892,
+      "IN": 0.9551797551247746,
+      "GB": 1.10534704249513,
+      "BR": 1.0753884295468306,
+      "CA": 1.2387466701097436
+    },
+    "oecdAreasAvailableM3": [
+      "AUS",
+      "BGR",
+      "BRA",
+      "CAN",
+      "CHE",
+      "CHL",
+      "CHN",
+      "COL",
+      "CRI",
+      "CZE",
+      "DNK",
+      "EA19",
+      "GBR",
+      "HUN",
+      "IDN",
+      "IND",
+      "ISL",
+      "ISR",
+      "JPN",
+      "KOR",
+      "MEX",
+      "NOR",
+      "NZL",
+      "POL",
+      "ROU",
+      "RUS",
+      "SWE",
+      "TUR",
+      "USA",
+      "ZAF"
+    ],
+    "oecdAreasAvailableM1": [
+      "AUS",
+      "BRA",
+      "CAN",
+      "CHE",
+      "CHL",
+      "CHN",
+      "COL",
+      "CRI",
+      "CZE",
+      "DNK",
+      "EA19",
+      "GBR",
+      "HUN",
+      "IDN",
+      "IND",
+      "ISL",
+      "ISR",
+      "JPN",
+      "KOR",
+      "MEX",
+      "NOR",
+      "NZL",
+      "POL",
+      "RUS",
+      "SWE",
+      "TUR",
+      "USA",
+      "ZAF"
+    ]
+  }
 }
