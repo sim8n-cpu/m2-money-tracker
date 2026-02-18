@@ -1,62 +1,86 @@
 {
   "meta": {
-    "generatedAt": "2026-02-18T00:48:42.191300+00:00",
+    "generatedAt": "2026-02-18T05:56:10.997926+00:00",
     "startYear": 1980,
     "endYear": 2025,
     "unitPolicy": "All comparisons rendered as billions of selected base currency.",
     "notes": [
-      "M2 proxy uses World Bank broad money (FM.LBL.BMNY.CN).",
+      "M2 primary source: World Bank broad money (FM.LBL.BMNY.CN).",
+      "Gap-filling source: OECD monetary aggregates (M3=MABM; fallback M1=MANM), annual XDC.",
+      "DE/FR/IT gap fill: EA19 aggregate allocated by country GDP share within EMU, then globally calibrated.",
+      "Residual gaps are filled via WB growth-chain and interpolation.",
       "FX conversion uses yfinance annual average close where available; World Bank PA.NUS.FCRF fallback otherwise.",
       "Cross-country comparability is indicative because national aggregate definitions differ."
     ]
   },
   "sample": {
-    "rows": 296,
-    "countries": 7,
+    "rows": 460,
+    "countries": 10,
     "start_year": 1980,
-    "end_year": 2024
+    "end_year": 2025
   },
   "country_correlations": [
     {
       "code": "BR",
       "country": "Brazil",
       "corr_m2_interest": 0.23294465793052546,
-      "corr_m2_fx": 0.050544451753374256,
+      "corr_m2_fx": -0.7015270053134864,
       "obs": 28
     },
     {
       "code": "CA",
       "country": "Canada",
-      "corr_m2_interest": 0.03458685980271234,
-      "corr_m2_fx": -0.16279562008093093,
-      "obs": 28
+      "corr_m2_interest": 0.10969477851756775,
+      "corr_m2_fx": -0.10005585783683778,
+      "obs": 37
     },
     {
       "code": "CN",
       "country": "China",
       "corr_m2_interest": 0.7318390812662454,
-      "corr_m2_fx": 0.07760947010247206,
+      "corr_m2_fx": -0.4863102674837504,
       "obs": 44
+    },
+    {
+      "code": "DE",
+      "country": "Germany",
+      "corr_m2_interest": null,
+      "corr_m2_fx": 0.09831638202060673,
+      "obs": 0
+    },
+    {
+      "code": "FR",
+      "country": "France",
+      "corr_m2_interest": null,
+      "corr_m2_fx": 0.05229313464375049,
+      "obs": 0
     },
     {
       "code": "GB",
       "country": "United Kingdom",
       "corr_m2_interest": 0.3130758391774018,
-      "corr_m2_fx": 0.051587415536869095,
+      "corr_m2_fx": 0.2217692970498958,
       "obs": 34
     },
     {
       "code": "IN",
       "country": "India",
-      "corr_m2_interest": 0.5032719736065174,
-      "corr_m2_fx": 0.3735562534394629,
-      "obs": 41
+      "corr_m2_interest": 0.5383361508658537,
+      "corr_m2_fx": -0.0962923838810811,
+      "obs": 42
+    },
+    {
+      "code": "IT",
+      "country": "Italy",
+      "corr_m2_interest": 0.17875679864947686,
+      "corr_m2_fx": -0.04792328471530366,
+      "obs": 36
     },
     {
       "code": "JP",
       "country": "Japan",
       "corr_m2_interest": 0.15825486842300862,
-      "corr_m2_fx": 0.15235969502349964,
+      "corr_m2_fx": 0.2478919673648432,
       "obs": 25
     },
     {
@@ -68,69 +92,75 @@
     }
   ],
   "pooled_ols": {
-    "n_obs": 241,
-    "n_params": 10,
-    "r2": 0.214804451211431,
+    "n_obs": 287,
+    "n_params": 11,
+    "r2": 0.2430590153843284,
     "coefficients": [
       {
         "variable": "const",
-        "coef": 1.224466079948517,
-        "std_err": 6.621436397144561,
-        "t_stat": 0.18492454001016423
+        "coef": -0.028525806636070163,
+        "std_err": 5.79738749830881,
+        "t_stat": -0.004920458852266059
       },
       {
         "variable": "lending_rate_pct",
-        "coef": 0.23303312594408898,
-        "std_err": 0.12926310067884478,
-        "t_stat": 1.8027814954173325
+        "coef": 0.25696114055487396,
+        "std_err": 0.11373202020402647,
+        "t_stat": 2.2593561610345576
       },
       {
         "variable": "fx_change_pct",
-        "coef": 0.04251882922454951,
-        "std_err": 0.14471871536489894,
-        "t_stat": 0.29380325217330056
+        "coef": -0.00549856448588305,
+        "std_err": 0.06856390452431135,
+        "t_stat": -0.0801961983354284
       },
       {
         "variable": "m2_growth_lag1",
-        "coef": 0.14543389856167485,
-        "std_err": 0.06563132163836899,
-        "t_stat": 2.215922137954512
+        "coef": 0.14476045438842833,
+        "std_err": 0.060044411559396604,
+        "t_stat": 2.410889716942761
       },
       {
         "variable": "CA",
-        "coef": 5.729101962043218,
-        "std_err": 6.063853741689711,
-        "t_stat": 0.9447955386283421
+        "coef": 5.78358833056416,
+        "std_err": 5.3828836318742495,
+        "t_stat": 1.0744405278087705
       },
       {
         "variable": "CN",
-        "coef": 13.32077607152342,
-        "std_err": 6.2080732299892745,
-        "t_stat": 2.1457182571840305
+        "coef": 14.425036108098281,
+        "std_err": 5.48256594655507,
+        "t_stat": 2.631073889254747
       },
       {
         "variable": "GB",
-        "coef": 7.39245599725768,
-        "std_err": 6.188395649260322,
-        "t_stat": 1.1945674478879313
+        "coef": 8.4830106597278,
+        "std_err": 5.475583100367033,
+        "t_stat": 1.5492433416194844
       },
       {
         "variable": "IN",
-        "coef": 9.12463726214658,
-        "std_err": 5.406484256869185,
-        "t_stat": 1.6877210454378575
+        "coef": 9.854384466218681,
+        "std_err": 4.837412801117086,
+        "t_stat": 2.0371187805066056
+      },
+      {
+        "variable": "IT",
+        "coef": 2.318417989628017,
+        "std_err": 5.367820414426307,
+        "t_stat": 0.4319104982344685
       },
       {
         "variable": "JP",
-        "coef": -0.30586863780851964,
-        "std_err": 6.785918326634228,
-        "t_stat": -0.04507402286408427
+        "coef": 0.9239592763036698,
+        "std_err": 5.979335290405347,
+        "t_stat": 0.15452541652686505
       },
       {
         "variable": "US",
-        "coef": 2.8677938724435137,
-        "std_err": 6.0643704783377785,
-        "t_stat": 0.472892261890564
+        "coef": 3.957737325710232,
+        "std_err": 5.351208883760746,
+        "t_stat": 0.7395968671155285
       }
     ],
     "spec": "m2_growth_pct ~ lending_rate_pct + fx_change_pct + m2_growth_lag1 + country_fixed_effects"
@@ -139,142 +169,174 @@
     {
       "year": 1985,
       "title": "Plaza Accord",
-      "mean_m2_growth_event_year": 58.61153134790079,
-      "mean_m2_growth_window_pm1": 55.118429988368646,
+      "mean_m2_growth_event_year": 43.4617942903718,
+      "mean_m2_growth_window_pm1": 40.99385852476884,
       "mean_lending_rate_window_pm1": 11.256629444311102,
-      "mean_fx_change_window_pm1": 0.0,
-      "obs_window": 21
+      "mean_fx_change_window_pm1": -5.726554531591747,
+      "obs_window": 30
     },
     {
       "year": 1991,
       "title": "USSR Dissolution",
-      "mean_m2_growth_event_year": 79.88661487275282,
-      "mean_m2_growth_window_pm1": 145.2431524404799,
-      "mean_lending_rate_window_pm1": 11.47743888888889,
-      "mean_fx_change_window_pm1": 0.0,
-      "obs_window": 21
+      "mean_m2_growth_event_year": 58.22960553777561,
+      "mean_m2_growth_window_pm1": 104.39002746967194,
+      "mean_lending_rate_window_pm1": 12.12245370370371,
+      "mean_fx_change_window_pm1": -9.09931543647597,
+      "obs_window": 30
     },
     {
       "year": 1997,
       "title": "Asian Financial Crisis",
-      "mean_m2_growth_event_year": 14.18832907594761,
-      "mean_m2_growth_window_pm1": 13.604026710096077,
-      "mean_lending_rate_window_pm1": 15.143649166666663,
-      "mean_fx_change_window_pm1": -0.5795438930499328,
-      "obs_window": 21
+      "mean_m2_growth_event_year": 11.244133677630957,
+      "mean_m2_growth_window_pm1": 10.96602709548634,
+      "mean_lending_rate_window_pm1": 14.558430797101442,
+      "mean_fx_change_window_pm1": -4.556280570357399,
+      "obs_window": 30
     },
     {
       "year": 1999,
       "title": "Euro Launch",
-      "mean_m2_growth_event_year": 10.285821626407875,
-      "mean_m2_growth_window_pm1": 10.830266868691975,
-      "mean_lending_rate_window_pm1": 16.7183380952381,
-      "mean_fx_change_window_pm1": 0.620531566891182,
-      "obs_window": 21
+      "mean_m2_growth_event_year": 8.591784712550746,
+      "mean_m2_growth_window_pm1": 8.800985304521005,
+      "mean_lending_rate_window_pm1": 15.545686458333334,
+      "mean_fx_change_window_pm1": 5.088874390973912,
+      "obs_window": 30
     },
     {
       "year": 2001,
       "title": "China WTO Entry",
-      "mean_m2_growth_event_year": 27.4742666270426,
-      "mean_m2_growth_window_pm1": 15.034493309212488,
-      "mean_lending_rate_window_pm1": 13.796798412698417,
-      "mean_fx_change_window_pm1": -0.4499946236005766,
-      "obs_window": 21
+      "mean_m2_growth_event_year": 22.354649682504803,
+      "mean_m2_growth_window_pm1": 12.496950032186975,
+      "mean_lending_rate_window_pm1": 12.940823611111114,
+      "mean_fx_change_window_pm1": -3.605133099030143,
+      "obs_window": 30
     },
     {
       "year": 2008,
       "title": "Global Financial Crisis",
-      "mean_m2_growth_event_year": 13.987633240572189,
-      "mean_m2_growth_window_pm1": 11.562679678574662,
-      "mean_lending_rate_window_pm1": 11.789664999999998,
-      "mean_fx_change_window_pm1": 1.8197119560723873,
-      "obs_window": 20
+      "mean_m2_growth_event_year": 12.248927811966363,
+      "mean_m2_growth_window_pm1": 8.843827510710128,
+      "mean_lending_rate_window_pm1": 10.671575416666665,
+      "mean_fx_change_window_pm1": 2.076026644827975,
+      "obs_window": 30
     },
     {
       "year": 2010,
       "title": "Euro Sovereign Debt Crisis",
-      "mean_m2_growth_event_year": 8.91849827732231,
-      "mean_m2_growth_window_pm1": 9.910943092521997,
-      "mean_lending_rate_window_pm1": 10.728331481481483,
-      "mean_fx_change_window_pm1": 1.280532515873842,
-      "obs_window": 18
+      "mean_m2_growth_event_year": 5.901538311435584,
+      "mean_m2_growth_window_pm1": 5.923319013446442,
+      "mean_lending_rate_window_pm1": 8.937394444444445,
+      "mean_fx_change_window_pm1": 0.6458010419320737,
+      "obs_window": 30
     },
     {
       "year": 2016,
       "title": "Brexit Referendum",
-      "mean_m2_growth_event_year": 7.657042989109165,
-      "mean_m2_growth_window_pm1": 7.160646219560164,
-      "mean_lending_rate_window_pm1": 13.28427222222222,
-      "mean_fx_change_window_pm1": -3.7158624295355884,
-      "obs_window": 18
+      "mean_m2_growth_event_year": 6.863826551315396,
+      "mean_m2_growth_window_pm1": 6.241275537754093,
+      "mean_lending_rate_window_pm1": 10.384063492063492,
+      "mean_fx_change_window_pm1": -4.226065747409614,
+      "obs_window": 30
     },
     {
       "year": 2020,
       "title": "COVID-19 Policy Shock",
-      "mean_m2_growth_event_year": 12.295815450985407,
-      "mean_m2_growth_window_pm1": 9.587666238589366,
-      "mean_lending_rate_window_pm1": 12.414548611111115,
-      "mean_fx_change_window_pm1": -2.024075541550059,
-      "obs_window": 18
+      "mean_m2_growth_event_year": 11.929141522505962,
+      "mean_m2_growth_window_pm1": 8.863468653723396,
+      "mean_lending_rate_window_pm1": 10.395422222222228,
+      "mean_fx_change_window_pm1": -1.042162837659448,
+      "obs_window": 30
     },
     {
       "year": 2022,
       "title": "Russia-Ukraine War",
-      "mean_m2_growth_event_year": 6.889368544351766,
-      "mean_m2_growth_window_pm1": 7.65365596153865,
-      "mean_lending_rate_window_pm1": 17.251875000000005,
-      "mean_fx_change_window_pm1": -1.6738560324149492,
-      "obs_window": 16
+      "mean_m2_growth_event_year": 5.728541351016025,
+      "mean_m2_growth_window_pm1": 6.365295124935889,
+      "mean_lending_rate_window_pm1": 12.980416314484131,
+      "mean_fx_change_window_pm1": -1.7234325085208935,
+      "obs_window": 30
     }
   ],
   "recent_summary_2015_2025": [
     {
       "code": "BR",
       "country": "Brazil",
-      "mean_m2_growth_pct": 11.281006847218302,
+      "mean_m2_growth_pct": 10.624672423509638,
       "mean_lending_rate_pct": 40.18166666666667,
-      "mean_fx_change_pct": -7.317222518849813,
-      "obs": 10
+      "mean_fx_change_pct": -6.544949251666014,
+      "obs": 11
     },
     {
       "code": "IN",
       "country": "India",
-      "mean_m2_growth_pct": 10.37940490988277,
-      "mean_lending_rate_pct": 9.42255952380952,
-      "mean_fx_change_pct": -2.651856514502479,
-      "obs": 7
+      "mean_m2_growth_pct": 10.281986097606675,
+      "mean_lending_rate_pct": 9.315632440476186,
+      "mean_fx_change_pct": -2.7882891607201907,
+      "obs": 11
     },
     {
       "code": "CN",
       "country": "China",
-      "mean_m2_growth_pct": 9.607148925160647,
+      "mean_m2_growth_pct": 9.719515327015474,
       "mean_lending_rate_pct": 4.35,
-      "mean_fx_change_pct": -1.4637367694406223,
-      "obs": 10
+      "mean_fx_change_pct": -1.3659315393552223,
+      "obs": 11
+    },
+    {
+      "code": "CA",
+      "country": "Canada",
+      "mean_m2_growth_pct": 6.771804902396295,
+      "mean_lending_rate_pct": 2.725,
+      "mean_fx_change_pct": -1.8142489718451913,
+      "obs": 11
     },
     {
       "code": "US",
       "country": "United States",
-      "mean_m2_growth_pct": 6.459338202530683,
+      "mean_m2_growth_pct": 6.050497295541365,
       "mean_lending_rate_pct": 3.978452380952383,
       "mean_fx_change_pct": 0.0,
-      "obs": 10
+      "obs": 11
     },
     {
       "code": "GB",
       "country": "United Kingdom",
-      "mean_m2_growth_pct": 5.09029797465551,
+      "mean_m2_growth_pct": 4.685422475476892,
       "mean_lending_rate_pct": null,
-      "mean_fx_change_pct": -2.3089965210383667,
-      "obs": 10
+      "mean_fx_change_pct": -2.101175751476946,
+      "obs": 11
+    },
+    {
+      "code": "DE",
+      "country": "Germany",
+      "mean_m2_growth_pct": 4.384246674838566,
+      "mean_lending_rate_pct": null,
+      "mean_fx_change_pct": -1.6301639117021105,
+      "obs": 11
+    },
+    {
+      "code": "FR",
+      "country": "France",
+      "mean_m2_growth_pct": 3.7306421852258156,
+      "mean_lending_rate_pct": null,
+      "mean_fx_change_pct": -1.6301639117021105,
+      "obs": 11
+    },
+    {
+      "code": "IT",
+      "country": "Italy",
+      "mean_m2_growth_pct": 3.6395545971784085,
+      "mean_lending_rate_pct": 3.267238208333333,
+      "mean_fx_change_pct": -1.6301639117021105,
+      "obs": 11
     },
     {
       "code": "JP",
       "country": "Japan",
-      "mean_m2_growth_pct": 2.960588092005903,
+      "mean_m2_growth_pct": 2.8968719187495786,
       "mean_lending_rate_pct": 1.0605277777777766,
-      "mean_fx_change_pct": -3.2369890662253233,
-      "obs": 10
+      "mean_fx_change_pct": -2.917120666268407,
+      "obs": 11
     }
   ]
 }

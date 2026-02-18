@@ -10,3 +10,6 @@ env.bak/
 venv.bak/
 .DS_Store
 *.log
+reports/data_update_summary.json
+reports/update_cron.log
+reports/email_m2_report_*.mml
